@@ -184,7 +184,8 @@
         "oauth2/jwt",
         "rest",
         "angular devtools",
-        "powerbi"
+        "powerbi",
+        "scrum"
       ]
     },
     {
@@ -217,7 +218,8 @@
         "angular material",
         "oracle",
         "rest",
-        "azure devops ci/cd"
+        "azure devops ci/cd",
+        "scrum"
       ]
     },
     {
@@ -254,7 +256,8 @@
         "azure devops ci/cd",
         "bicep",
         "oauth2/jwt",
-        "swagger"
+        "swagger",
+        "scrum"
       ]
     },
     {
@@ -292,7 +295,8 @@
         "docker",
         "kibana",
         "oauth2/jwt",
-        "swagger"
+        "swagger",
+        "scrum"
       ]
     },
     {
@@ -322,7 +326,8 @@
         "powershell",
         "sql server",
         "azure virtual machines",
-        "shol (wiskundige matrix)"
+        "shol (wiskundige matrix)",
+        "scrum"
       ]
     },
     {
@@ -349,7 +354,8 @@
         "gitlab",
         "telerik",
         "powershell",
-        "sql server"
+        "sql server",
+        "scrum"
       ]
     },
     {
@@ -381,7 +387,8 @@
         "rest",
         "postgresql",
         "nodejs",
-        "cli (in node)"
+        "cli (in node)",
+        "scrum"
       ]
     },
     {
