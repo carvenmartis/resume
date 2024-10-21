@@ -63,9 +63,9 @@
   "werkervaringen": [
     {
       "bedrijf": "Rabobank Utrecht",
-      "rol": "Full stack Developer / DevOps Engineer",
+      "rol": "Fullstack Developer / DevOps Engineer",
       "periode": "2021 - heden",
-      "situatie": "Als full stack developer binnen Tech 4 Dev (T4D) bij Rabobank ondersteun ik wereldwijd meer dan 400 ontwikkelteams bij het naleven van de bank's compliancy-richtlijnen binnen hun pipelines. Dit realiseer ik door container based applicaties te ontwikkelen die de pipelines op geautomatiseerde wijze controleren en waar nodig corrigeren. Om de teams inzicht te geven in de status van hun pipelines, ontwikkel ik een dashboard met Angular. Daarnaast ben ik verantwoordelijk voor het verstrekken van data aan verschillende teams binnen de bank, voor de meeste actuele informatie. Daarnaast ontwikkel en onderhoud ik een dashboard waarmee de status van de pipelines wordt gemonitord en gerapporteerd.",
+      "situatie": "Als fullstack developer bij Rabobank ben ik verantwoordelijk voor het ontwikkelen van containerized .NET applicaties die gekoppeld zijn aan een Angular dashboard. De dashboard verstrekt alle informatie over de compliancy van alle pipelines binnen de bank. Daarnaast was ik verantwoordelijk om de compliancy process te automatiseren. Alle data wordt verzameld en gerapporteerd in PowerBI.",
       "taken": [
         "Ontwikkelen van continainerized microservices in C# en .NET Core",
         "Ontwikkelen van een Angular dashboard",
@@ -78,6 +78,7 @@
       "gereedschappen": [
         "C#",
         ".NET Core",
+        "azure",
         "Git",
         "NodeJS",
         "Webpack",
@@ -87,7 +88,7 @@
         "Visual Studio Code",
         "Azure DevOps CI/CD",
         "Angular",
-        "ngrx/store",
+        "ngrx",
         "tailwindcss",
         "powershell",
         "bicep",
@@ -96,7 +97,71 @@
         "docker",
         "kubernetes",
         "OAuth2/JWT",
-        "REST"
+        "REST",
+        "angular devtools",
+        "powerbi"
+      ]
+    },
+    {
+      "bedrijf": "Dienst Uitvoering Onderwijs (DUO)",
+      "rol": "Fullstack Developer",
+      "periode": "Januari 2021 - September 2021",
+      "situatie": "Bij DUO was ik verantwoordelijk voor het ontwikkelen en uitbreiden van webapplicaties in Angular en ook bestaande MVC applicaties. De applicatie was bedoeld voor onderwijsinstellingen om belangrijke gegevens in te zien, aanvragen in te voeren en bekostiging te regelen. ",
+      "taken": [
+        "Ontwikkelen en beheren van de frontend applicaties(Angular/MVC)",
+        "Jenkins pipelines inrichten voor het deployen van de applicaties",
+        "Ontwikkelen van een backend in .NET Core",
+        "Ontwikkelen van een REST API",
+        "Implementeren van een Role Based Access Control",
+        "Code Reviews"
+      ],
+      "gereedschappen": [
+        "C#",
+        ".NET Core",
+        "Git",
+        "NodeJS",
+        "Apache",
+        "Nginx",
+        "IIS",
+        "Jest",
+        "Javascript/Typescript",
+        "playwright",
+        "Angular Material",
+        "Oracle",
+        "REST",
+        "Azure DevOps CI/CD"
+      ]
+    },
+    {
+      "bedrijf": "AkzoNobel",
+      "rol": "Fullstack Developer",
+      "periode": "April 2021 - Januari 2022",
+      "situatie": "Bij AkzoNobel was ik verantwoordelijk voor het ontwikkelen van een Angular applicatie het weergeven van verfproducten met bij behorende informatie. Daarnaast was ik ook verantwoordelijk voor het ontwikkelen van een systeem om verf te mengen voor klanten binenen de bouwmarkten.",
+      "taken": [
+        "Ontwikkelen en beheren van Angular applicaties",
+        "Ontwikkelen van een systeem om verf te mengen",
+        "Ontwikkelen van een REST API",
+        "PoC implementeren voor buitenlandse vestigingen",
+        "Gebruiksvriendelijkheid verbeteren",
+        "Samenwerking met UX/UI designers",
+        "Code Reviews"
+      ],
+      "gereedschappen": [
+        "C#",
+        ".NET Core",
+        "Git",
+        "NodeJS",
+        "azure",
+        "IIS",
+        "Jest",
+        "Javascript/Typescript",
+        "selinium",
+        "Angular Material",
+        "SQL Server",
+        "REST",
+        "Azure DevOps CI/CD",
+        "bicep",
+        "OAuth2/JWT"
       ]
     }
   ]
