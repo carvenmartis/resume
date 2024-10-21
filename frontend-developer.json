@@ -65,28 +65,39 @@
       "bedrijf": "Rabobank Utrecht",
       "rol": "Full stack Developer / DevOps Engineer",
       "periode": "2021 - heden",
-      "situatie": "Als full stack developer binnen de Tech 4 Dev (T4D) van Rabobank ondersteun ik meer dan 400 ontwikkelteams wereldwijd om hun pipeline, om volgens de compliancy regels van de bank te voldoen. Dit doe ik door het ontwikkelen van microservices om alle pipelines op een geautomatiseerde wijze te controleren en corrigeren. Om andere teams een overzicht te geven van de status van hun pipeline, ontwikkel ik een dashboard met behulp van Angular en Azure. Ik ben ook verantwoordelijk voor het leveren van data aan meerdere teams binnen de bank zodat alle systemen geupdate zijn.  Daarnaast ben ik verantwoordelijk voor het ontwikkelen van een dashboard om de status van de pipelines te monitoren en te rapporteren. ",
+      "situatie": "Als full stack developer binnen Tech 4 Dev (T4D) bij Rabobank ondersteun ik wereldwijd meer dan 400 ontwikkelteams bij het naleven van de bank's compliancy-richtlijnen binnen hun pipelines. Dit realiseer ik door container based applicaties te ontwikkelen die de pipelines op geautomatiseerde wijze controleren en waar nodig corrigeren. Om de teams inzicht te geven in de status van hun pipelines, ontwikkel ik een dashboard met Angular. Daarnaast ben ik verantwoordelijk voor het verstrekken van data aan verschillende teams binnen de bank, voor de meeste actuele informatie. Daarnaast ontwikkel en onderhoud ik een dashboard waarmee de status van de pipelines wordt gemonitord en gerapporteerd.",
       "taken": [
         "Ontwikkelen van continainerized microservices in C# en .NET Core",
         "Ontwikkelen van een Angular dashboard",
         "Implementeren van compliancy rules van de bank",
         "Infrastructure as a code in Azure",
         "Monitoring en rapportage in PowerBI",
-        "Stake holder management",
+        "Stakeholder management",
         "Code Reviews"
+      ],
+      "gereedschappen": [
+        "C#",
+        ".NET Core",
+        "Git",
+        "NodeJS",
+        "Webpack",
+        "Jest",
+        "HTML5/CSS/SASS",
+        "JavsScript/TypeScript",
+        "Visual Studio Code",
+        "Azure DevOps CI/CD",
+        "Angular",
+        "ngrx/store",
+        "tailwindcss",
+        "powershell",
+        "bicep",
+        "terraform",
+        "storybook",
+        "docker",
+        "kubernetes",
+        "OAuth2/JWT",
+        "REST"
       ]
     }
-  ],
-  "gereedschappen": [
-    "C#",
-    "Visual Studio Code",
-    "Azure DevOps CI/CD",
-    "Angular",
-    "ngrx/store",
-    "tailwindcss",
-    "powershell",
-    "bicep",
-    "terraform",
-    "storybook"
   ]
 }
