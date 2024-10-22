@@ -64,8 +64,8 @@
     "Powershell/Bash",
     "Selenium",
     "SpecFlow",
-    // Azure
 
+    // Azure
     "Application Insights",
     "Kubernetes",
     "Container Registry",
@@ -79,44 +79,22 @@
     "Table Storage",
     "Cosmos DB",
 
-    // Frotnend
+    // Frontend
+    "Angular",
+    "React",
+    "nodejs",
+    "webpack",
+    "playwright",
+    "cypress",
+    "Tailwindcss",
+    "Bootstrap",
     "HTML5",
     "CSS",
     "SCSS",
-    "Node.js",
-    "Storybookjs",
-    "BowerJS",
-    "Grunt",
-    "Socket.io",
-    "Apache Cordova",
-    "REST",
-    "Webpack",
-    "Selinium",
-    "Playwrite",
-    "cypress",
-    "Azure",
-    "Tailwindcss",
-    "Bootstrap",
+    "azuredevops-ui",
     "Angular Material",
-    "Angular",
-    "AngularJS",
-
-    "PowerBI",
-    "Kibana",
-    "OAuth",
-    "JWT",
-    "Azure DevOps",
-    "Jenkins",
-    "Kubernetes",
-    "Docker",
-    "ASP.NET",
-    "MVC",
-    "Slack",
-    "Teams",
-    "Webex",
-    "SyncFusion",
-    "Telerik",
-    "Winforms / WPF (MVVM)"
+    "ngrx",
+    "storybookjs"
   ],
   "opleidingen": [
     {
@@ -182,7 +160,7 @@
       "bedrijf": "Rabobank Utrecht",
       "rol": "DevOps Engineer",
       "periode": "2021 - heden",
-      "situatie": "Als devops engineer bij Rabobank ben ik verantwoordelijk voor het ontwikkelen van containerized .NET applicaties die gekoppeld zijn aan een React dashboard. Daarnaast maak ik gebruik van Azure DevOps api om de compliancy process voor alle pipelines binnen de bank te automatiseren. Alle data wordt verzameld en gerapporteerd in PowerBI.",
+      "situatie": "Als devops engineer bij Rabobank ben ik verantwoordelijk voor het ontwikkelen van containerized .NET applicaties die gekoppeld zijn aan een React dashboard. Daarnaast maak ik gebruik van Azure DevOps API om de compliancy process voor alle pipelines binnen de bank te automatiseren. Alle data wordt verzameld en gerapporteerd in PowerBI.",
       "taken": [
         "Ontwikkelen van continainerized microservices in C# en .NET Core",
         "Ontwikkelen van een React dashboard",
@@ -201,7 +179,8 @@
         "azure redis cache",
         "azure kubernetes",
         "azure container registry",
-        "azure "
+        "azure openshift",
+        "azure ",
         "git",
         "react",
         "javascript/typescript",
@@ -211,7 +190,7 @@
         "bicep",
         "terraform",
         "docker",
-  
+
         "oauth2/jwt",
         "rest",
         "openshift",
@@ -413,7 +392,6 @@
         "entityframework",
         "design patterns"
       ]
-
     },
     {
       "bedrijf": "Quby",
@@ -425,7 +403,7 @@
         "Koppeling maken met z-wave protocol",
         "Ontwikkelen van een user interface",
         "Meerdere talen ondersteunen",
-         "Alle data verzamelen en versturen naar de backend"
+        "Alle data verzamelen en versturen naar de backend"
       ],
       "gereedschappen": [
         "c#",
@@ -515,7 +493,7 @@
         "Ontwikkelen van een REST API",
         "Encoderen en decoderen van data",
         "Ontwikkelen van een user interface",
-        "Data opslaan in een database",
+        "Data opslaan in een database"
       ],
       "gereedschappen": [
         "c#",
