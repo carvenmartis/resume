@@ -1,0 +1,532 @@
+{
+  "profiel": "Met meer dan 10 jaar ervaring als softwareontwikkelaar, gespecialiseerd in .NET, TypeScript, en Azure, ontwerp en implementeer ik schaalbare IT-oplossingen voor complexe omgevingen. Door automatisering en het gebruik van moderne .NET standaarden zorg ik voor optimalisatie en verbe-tering van processen. In mijn opdracht bij de Rabo ben ik als DevOps Engineer actief geweest bij het ontwikkelen van veilige, schaalbare en geautomatiseerde CI/CD-pipelines.",
+  "vaardigheden": "Ik beschik over een combinatie van technische expertise en sterke probleemoplossende vaardig-heden. Door mijn analytisch vermogen kan ik complexe situaties snel doorgronden en omzetten in praktische oplossingen. Ik ben flexibel en leergierig, waardoor ik snel nieuwe technologieën en methoden eigen maak en vind moeiteloos mijn weg in nieuwe werkomgevingen. Daarnaast heb ik sterke communicatieve en samenwerkingsvaardigheden, wat mij in staat stelt om goed te werken binnen teams of zelfstandig. Ik streef er altijd naar om resultaten te behalen die voldoen aan zo-wel de projectdoelen als de verwachtingen van de klant.",
+  "branches": [
+    "Nederlandse Bank",
+    "Overheid",
+    "Industrie",
+    "Gezondheidszorg",
+    "Luchtvaart",
+    "Energie"
+  ],
+  "methoden": [
+    "CI/CD Pipelines",
+    "Infrastructure as Code",
+    "Clean Code",
+    "Containerization",
+    "Git/Gitflow",
+    "Orchestration",
+    "TDD",
+    "Agile / Scrum"
+  ],
+  "programmeertalen": [
+    "C#",
+    "TypeScript",
+    "JavaScript",
+    "Java",
+    "Objective-C",
+    "Livescript",
+    "SQL",
+    "Python"
+  ],
+  "databases": [
+    "SQL Server",
+    "MySQL",
+    "Oracle",
+    "PostgreSQL",
+    "NoSQL",
+    "Oracle"
+  ],
+  "tooling": [
+    "Visual Studio",
+    "Visual Studio Code",
+    "Docker",
+    "Git/Gitlab",
+    "Azure",
+    "Jenkins",
+    "Azure DevOps",
+    "Terraform",
+    "Kibana",
+    "Bicep",
+    "SonarQube",
+    "Ansible"
+  ],
+  "overige": [
+    "Winforms",
+    "XML",
+    "XSLT",
+    "TFS",
+    "JWT",
+    "OAuth",
+    "Openshift",
+    "REST",
+    "T-SQL",
+    "Powershell/Bash",
+    "Selenium",
+    "SpecFlow",
+    // Azure
+
+    "Application Insights",
+    "Kubernetes",
+    "Container Registry",
+    "Cache for Redis",
+    "Keyvault",
+    "Frontdoor",
+    "LogAnalytics",
+    "ServiceBus",
+    "Functions",
+    "App Service",
+    "Table Storage",
+    "Cosmos DB",
+
+    // Frotnend
+    "HTML5",
+    "CSS",
+    "SCSS",
+    "Node.js",
+    "Storybookjs",
+    "BowerJS",
+    "Grunt",
+    "Socket.io",
+    "Apache Cordova",
+    "REST",
+    "Webpack",
+    "Selinium",
+    "Playwrite",
+    "cypress",
+    "Azure",
+    "Tailwindcss",
+    "Bootstrap",
+    "Angular Material",
+    "Angular",
+    "AngularJS",
+
+    "PowerBI",
+    "Kibana",
+    "OAuth",
+    "JWT",
+    "Azure DevOps",
+    "Jenkins",
+    "Kubernetes",
+    "Docker",
+    "ASP.NET",
+    "MVC",
+    "Slack",
+    "Teams",
+    "Webex",
+    "SyncFusion",
+    "Telerik",
+    "Winforms / WPF (MVVM)"
+  ],
+  "opleidingen": [
+    {
+      "naam": "Avans Hogeschool Breda",
+      "studie": "Technische Informatica",
+      "periode": "2010 - 2015"
+    },
+    {
+      "naam": "Telematica",
+      "studie": "MBO Niveau 4 (MTS)",
+      "periode": "2006 - 2010"
+    }
+  ],
+  "cursussen": [
+    {
+      "naam": "Azure AZ 900",
+      "cursus": "Microsoft Azure Fundamentals",
+      "periode": "2020"
+    },
+    {
+      "naam": "Azure AZ 104",
+      "cursus": "Microsoft Azure Administrator",
+      "periode": "2021"
+    },
+    {
+      "naam": "Azure AZ 204",
+      "cursus": "Developing Solutions for Microsoft Azure",
+      "periode": "2021"
+    },
+    {
+      "naam": "Azure AZ 400",
+      "cursus": "Designing and Implementing Microsoft DevOps Solutions",
+      "periode": "2021"
+    },
+    {
+      "naam": "Scrum Master PSM 1",
+      "cursus": "Scrum Master PSM 1",
+      "periode": "2021"
+    },
+    {
+      "naam": "Angular",
+      "cursus": "Angular",
+      "periode": "2016"
+    },
+    {
+      "naam": "Embedded Linux Vijfhart",
+      "cursus": "Embedded Linux",
+      "periode": "2016"
+    },
+    {
+      "naam": "Design Patterns CompuTrain",
+      "cursus": "Design Patterns",
+      "periode": "2015"
+    },
+    {
+      "naam": "Programmeren in C++ CompuTrain",
+      "cursus": "Programmeren in C++",
+      "periode": "2015"
+    }
+  ],
+  "werkervaringen": [
+    {
+      "bedrijf": "Rabobank Utrecht",
+      "rol": "DevOps Engineer",
+      "periode": "2021 - heden",
+      "situatie": "Als devops engineer bij Rabobank ben ik verantwoordelijk voor het ontwikkelen van containerized .NET applicaties die gekoppeld zijn aan een React dashboard. Daarnaast maak ik gebruik van Azure DevOps api om de compliancy process voor alle pipelines binnen de bank te automatiseren. Alle data wordt verzameld en gerapporteerd in PowerBI.",
+      "taken": [
+        "Ontwikkelen van continainerized microservices in C# en .NET Core",
+        "Ontwikkelen van een React dashboard",
+        "Implementeren van compliancy rules van de bank",
+        "Infrastructure as a code in Azure",
+        "Werken met Microsoft om niet gedocumenteerde API's te gebruiken",
+        "Stakeholder management",
+        "Code Reviews"
+      ],
+      "gereedschappen": [
+        "c#",
+        ".net core",
+        "azure",
+        "azure service-bus",
+        "azure storage",
+        "azure redis cache",
+        "azure kubernetes",
+        "azure container registry",
+        "azure "
+        "git",
+        "react",
+        "javascript/typescript",
+        "visual studio/code",
+        "azure devops ci/cd",
+        "azuredevoper-ui",
+        "bicep",
+        "terraform",
+        "docker",
+  
+        "oauth2/jwt",
+        "rest",
+        "openshift",
+        "powerbi",
+        "scrum"
+      ]
+    },
+    {
+      "bedrijf": "Dienst Uitvoering Onderwijs (DUO)",
+      "rol": "Fullstack Developer",
+      "periode": "Januari 2021 - September 2021",
+      "situatie": "Bij DUO was ik verantwoordelijk voor het ontwikkelen en uitbreiden van webapplicaties in Angular en ook bestaande MVC applicaties. De applicatie was bedoeld voor onderwijsinstellingen om belangrijke gegevens in te zien, aanvragen in te voeren en bekostiging te regelen.",
+      "taken": [
+        "Ontwikkelen en beheren van de frontend applicaties(Angular/MVC)",
+        "Jenkins pipelines inrichten voor het deployen van de applicaties",
+        "Ontwikkelen van een backend in .NET Core",
+        "Ontwikkelen van een REST API",
+        "Implementeren van een Role Based Access Control",
+        "Code Reviews"
+      ],
+      "gereedschappen": [
+        "c#",
+        ".net core",
+        "git",
+        "nodejs",
+        "html5",
+        "css",
+        "apache",
+        "ngrx",
+        "nginx",
+        "iis",
+        "jest",
+        "javascript/typescript",
+        "playwright",
+        "angular material",
+        "oracle",
+        "rest",
+        "azure devops ci/cd",
+        "scrum"
+      ]
+    },
+    {
+      "bedrijf": "AkzoNobel",
+      "rol": "Fullstack Developer",
+      "periode": "April 2021 - Januari 2022",
+      "situatie": "Bij AkzoNobel was ik verantwoordelijk voor het ontwikkelen van een Angular applicatie het weergeven van verfproducten met bij behorende informatie. Daarnaast was ik ook verantwoordelijk voor het ontwikkelen van een systeem om verf te mengen voor klanten binenen de bouwmarkten. Daarnaast was ik verantwoordelijk voor de migratie van AngularJS naar Angular voor andere projecten.",
+      "taken": [
+        "Ontwikkelen en beheren van Angular applicaties",
+        "Ontwikkelen van een systeem om verf te mengen",
+        "Ontwikkelen van een REST API",
+        "PoC implementeren voor buitenlandse vestigingen",
+        "Gebruiksvriendelijkheid verbeteren",
+        "Samenwerking met UX/UI designers",
+        "Code Reviews"
+      ],
+      "gereedschappen": [
+        "c#",
+        ".net core",
+        "git",
+        "nodejs",
+        "html5",
+        "css/sass",
+        "azure",
+        "iis",
+        "ngrx/redux",
+        "jest",
+        "cypress",
+        "javascript/typescript",
+        "selinium",
+        "angular",
+        "angular material",
+        "sql server",
+        "rest",
+        "azure devops ci/cd",
+        "bicep",
+        "oauth2/jwt",
+        "swagger",
+        "scrum"
+      ]
+    },
+    {
+      "bedrijf": "Medux",
+      "rol": "Fullstack Developer",
+      "periode": "Oktober 2017 - Maart 2021",
+      "situatie": "Bij Medux was ik verantwoordelijk voor het uitbreiden van hun ERP systeem (Alladin) en het automatiseren van het orderproces. Daarnaast was ik verantwoordelijk om de bestaande ASP.NET applicatie te beheren.",
+      "taken": [
+        "Ontwikkelen en beheren van de web applicaties in AngularJS",
+        "Beheren van bestaande ASP.NET MVC applicaties",
+        "Ontwikkelen van containerized backend in .NET",
+        "Responsive design implementeren",
+        "Implementeren van een Role Based Access Control",
+        "Implementeren van OAuth",
+        "Azure DevOps installeren onpremise en CI/CD pipeline inrichten",
+        "Monitoren van softwareprestaties met Kibana"
+      ],
+      "gereedschappen": [
+        "c#",
+        "asp.net",
+        "gitlab",
+        "html5",
+        "css",
+        "nodejs",
+        "redux",
+        "iis",
+        "cypress",
+        "jasmine",
+        "javascript",
+        "angularjs",
+        "bootstrap",
+        "mysql",
+        "rest",
+        "soap ui",
+        "azure devops (onprmise)",
+        "docker",
+        "kibana",
+        "oauth2/jwt",
+        "swagger",
+        "scrum"
+      ]
+    },
+    {
+      "bedrijf": "Aeromath",
+      "rol": "Fullstack Developer",
+      "periode": "Augustus 2017 - januari 2018",
+      "situatie": "Bij Aeromath was ik verantwoordelijk voor het ontwikkelen van een WPF en ASP.NET applicatie voor het berekenen van veilige marges voor opstijd en landen van helicopters op varende schepen. Daarnaast was ik verantwoordelijk voor het ontwikkelen van een REST API voor het weergeven van wiskundige algoritmes in een grafiek.",
+      "taken": [
+        "Ontwikkelen van een WPF en ASP.NET applicatie",
+        "Ontwikkelen van een REST API",
+        "Wiskundige algoritmes implementeren en weergeven in een grafiek",
+        "Stakeholder wekelijks contact",
+        "Vertalen van wiskundige formules naar code",
+        "CI/CD Omgeving inrichten in Jenkins"
+      ],
+      "gereedschappen": [
+        "c#",
+        "asp.net",
+        "javascript",
+        "jquery",
+        "html5",
+        "css",
+        "mvc",
+        "mvvm",
+        "tfs",
+        "syncfusion",
+        "powershell",
+        "sql server",
+        "azure virtual machines",
+        "shol (wiskundige matrix)",
+        "scrum"
+      ]
+    },
+    {
+      "bedrijf": "BE Aerospace",
+      "rol": "Fullstack Developer",
+      "periode": "Januari 2017 - September 2017",
+      "situatie": "Bij BE Aerospace was ik verantwoordelijk voor migratie van een bestaande voorraad applicatie naar een nieuwe ASP.NET in combinatie met WinForms. Dit was bedoeld voor het beheren van de voorraad van vliegtuigonderdelen voor interne medewerkers. Het systeem moest ook alle gegevens printen voor de boekhouding.",
+      "taken": [
+        "Ontwikkelen van een ASP.NET applicatie",
+        "Ontwikkelen van een WinForms applicatie",
+        "Migreren van data",
+        "Printen van gegevens voor de boekhouding",
+        "Stakeholder regalmatig contact",
+        "Implementeren van een Role Based Access Control"
+      ],
+      "gereedschappen": [
+        "c#",
+        "asp.net 4.5",
+        "javascript",
+        "jquery",
+        "html5",
+        "css",
+        "mvc",
+        "gitlab",
+        "telerik",
+        "powershell",
+        "sql server",
+        "scrum"
+      ]
+    },
+    {
+      "bedrijf": "Altran",
+      "rol": "Fullstack Developer",
+      "periode": "Augustus 2016 - December 2016",
+      "situatie": "",
+      "taken": [
+        "Ontwikkelen van een Angular applicatie",
+        "Ontwikkelen van een REST API",
+        "Implementeren van een Role Based Access Control",
+        "Code Reviews"
+      ],
+      "gereedschappen": [
+        "c#",
+        ".net",
+        "wcf",
+        "mvvm",
+        "wpf",
+        "tcp",
+        "sql server",
+        "entityframework",
+        "design patterns"
+      ]
+
+    },
+    {
+      "bedrijf": "Quby",
+      "rol": "Software Developer",
+      "periode": "Maart 2015 - december 2016",
+      "situatie": "Bij Quby was ik verantwoordelijk voor het ontwikkelen van een proof of concept voor een nieuwe thermostaat voor de buitenlandse markt. Ik heb een nieuwe user interface gemaakt voor specifieke klanten en ook nieuwe thermostraat radiatoren geïntegreerd. De verbindg met the thermostaatkraan was doormiddel van z-wave protocol. ",
+      "taken": [
+        "Software uitbreiden naar wensen van de buitelandse markt",
+        "Koppeling maken met z-wave protocol",
+        "Ontwikkelen van een user interface",
+        "Meerdere talen ondersteunen",
+         "Alle data verzamelen en versturen naar de backend"
+      ],
+      "gereedschappen": [
+        "c#",
+        "C/C++",
+        "QML",
+        "QT",
+        "Linux",
+        "Gitlab",
+        "Jenkins",
+        "Confluence/Jira",
+        "messaging system",
+        "Eclipse",
+        "XML",
+        "JSON",
+        "REST"
+      ]
+    },
+    {
+      "bedrijf": "Appedemic",
+      "rol": "Web Developer",
+      "periode": "Februari 2014 - 2015",
+      "situatie": "Bij Appedemic was ik verantwoordelijk voor het ontwikelen van een systeem waar gebruikers met weinig technische kennis een app konden maken voor zowel android als ios. Ik heb een CMS ontwikkeld voor gebruikers om hun eigen standard apps te maken. Ik was ook verantwoordelijk voor het ontwikkelen van plugins voor de op beide besturingssystemen (android/ios).",
+      "taken": [
+        "Ontwikkelen van een CMS",
+        "Implementeren van een command line interface",
+        "Ontwikkelen van plugins voor android en ios",
+        "Ontwikkelen van een REST API",
+        "Verbinding maken met een device real time",
+        "Postgresql database beheren",
+        "Hosting van de applicatie in Digital Ocean"
+      ],
+      "gereedschappen": [
+        "javascript/livescript",
+        "bowerjs",
+        "webpack",
+        "gitlab",
+        "java",
+        "objective-c",
+        "grunt",
+        "HTML5",
+        "css",
+        "apache cordova",
+        "socket.io",
+        "rest",
+        "postgresql",
+        "nodejs",
+        "cli (in node)",
+        "scrum"
+      ]
+    },
+    {
+      "bedrijf": "Label A",
+      "rol": "Android Mobile Developer",
+      "periode": "Augustus 2012 - Januari 2013",
+      "situatie": "Bij Label A was ik verantwoordelijk voor het ontwikkelen van een mobiele applicatie waarmee gebruikers winkels, folders en aanbiedingen van het winkelcentrum konden bekijken. Ik heb het Photoshop design omgezet naar een functionele applicatie en design patterns toegepast om de app schaalbaar en performant te maken. Daarnaast werkte ik aan mobiele projecten zoals Golfy en Subprise van Subway.",
+      "taken": [
+        "Ontwikkelen van een mobiele applicatie voor Android",
+        "Implementeren van de contract voor de REST API",
+        "Samenwerken met UX/UI designers",
+        "Photoshop design omzetten naar een functionele applicatie",
+        "Release naar de Google Play Store",
+        "Feedback van gebruikers verwerken"
+      ],
+      "gereedschappen": [
+        "java",
+        "android",
+        "svn",
+        "exclipse",
+        "photoshop",
+        "design patterns",
+        "jira",
+        "confluence",
+        "rest",
+        "gson",
+        "aurasma kernel (augmented reality)",
+        "sql-lite",
+        "sha512"
+      ]
+    },
+    {
+      "bedrijf": "Avans Hogeschool",
+      "rol": "Software Developer",
+      "periode": "September 2012 - November 2012",
+      "situatie": "Bij Avans Hogeschool was ik verantwoordelijk voor het ontwikkelen van een desktop applicatie in Winform om gegevens van een health trainer te kunnen verzamelen en analyseren. Het systeem moest real time data kunnen weergeven in een user interface en ook data kunnen opslaan in een database.",
+      "taken": [
+        "Ketler Health Trainer data uitlezen doormiddel van de COM poort",
+        "Ontwikkelen van een REST API",
+        "Encoderen en decoderen van data",
+        "Ontwikkelen van een user interface",
+        "Data opslaan in een database",
+      ],
+      "gereedschappen": [
+        "c#",
+        "winforms",
+        "svn",
+        "sql server",
+        "entityframework",
+        "mvc pattern",
+        "serialization",
+        "forms"
+      ]
+    }
+  ]
+}
