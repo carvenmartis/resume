@@ -1,5 +1,5 @@
 {
-  "profiel": "Met meer dan 10 jaar ervaring als softwareontwikkelaar, gespecialiseerd in .NET, TypeScript, en Azure, ontwerp en implementeer ik schaalbare IT-oplossingen voor complexe omgevingen. Door automatisering en het gebruik van moderne .NET standaarden zorg ik voor optimalisatie en verbe-tering van processen. In mijn opdracht bij de Rabo ben ik als DevOps Engineer actief geweest bij het ontwikkelen van veilige, schaalbare en geautomatiseerde CI/CD-pipelines.",
+  "profile": "Met meer dan 10 jaar ervaring als softwareontwikkelaar, gespecialiseerd in .NET, TypeScript, en Azure, ontwerp en implementeer ik schaalbare IT-oplossingen voor complexe omgevingen. Door automatisering en het gebruik van moderne .NET standaarden zorg ik voor optimalisatie en verbe-tering van processen. In mijn opdracht bij de Rabo ben ik als DevOps Engineer actief geweest bij het ontwikkelen van veilige, schaalbare en geautomatiseerde CI/CD-pipelines.",
   "vaardigheden": "Ik beschik over een combinatie van technische expertise en sterke probleemoplossende vaardig-heden. Door mijn analytisch vermogen kan ik complexe situaties snel doorgronden en omzetten in praktische oplossingen. Ik ben flexibel en leergierig, waardoor ik snel nieuwe technologieën en methoden eigen maak en vind moeiteloos mijn weg in nieuwe werkomgevingen. Daarnaast heb ik sterke communicatieve en samenwerkingsvaardigheden, wat mij in staat stelt om goed te werken binnen teams of zelfstandig. Ik streef er altijd naar om resultaten te behalen die voldoen aan zo-wel de projectdoelen als de verwachtingen van de klant.",
   "branches": [
     "Nederlandse Bank",
@@ -65,7 +65,6 @@
     "Selenium",
     "SpecFlow",
 
-    // Azure
     "Application Insights",
     "Kubernetes",
     "Container Registry",
@@ -79,7 +78,6 @@
     "Table Storage",
     "Cosmos DB",
 
-    // Frontend
     "Angular",
     "React",
     "nodejs",
@@ -190,6 +188,7 @@
         "bicep",
         "terraform",
         "docker",
+
         "oauth2/jwt",
         "rest",
         "openshift",
@@ -201,31 +200,33 @@
       "bedrijf": "Dienst Uitvoering Onderwijs (DUO)",
       "rol": "Fullstack Developer",
       "periode": "Januari 2021 - September 2021",
-      "situatie": "Bij DUO was ik verantwoordelijk voor het ontwikkelen en uitbreiden van bestaande wcf services en web applicaties in Angular en andere portalen voor onderwijsinstellingen. Daarnaast was ik verantwoordelijk voor het opstellen van pipelines in jenkins en het monitoren van de softwareprestaties met Kibana.",
+      "situatie": "Bij DUO was ik verantwoordelijk voor het ontwikkelen en uitbreiden van webapplicaties in Angular en ook bestaande MVC applicaties. De applicatie was bedoeld voor onderwijsinstellingen om belangrijke gegevens in te zien, aanvragen in te voeren en bekostiging te regelen.",
       "taken": [
-        "Ontwikkelen en beheren van portalen in angular en ASP.NET",
+        "Ontwikkelen en beheren van de frontend applicaties(Angular/MVC)",
         "Jenkins pipelines inrichten voor het deployen van de applicaties",
-        "Onderhouden en uitbreiden van bestaande wcf services",
-        "Migreren van legacy code naar moderene .NET standaarden",
+        "Ontwikkelen van een backend in .NET Core",
+        "Ontwikkelen van een REST API",
         "Implementeren van een Role Based Access Control",
-        "Uitbreiden van oracle scripts"
+        "Code Reviews"
       ],
       "gereedschappen": [
         "c#",
-        ".net",
-        "wcf",
-        "mvc",
-        "angular",
-        "nodejs",
+        ".net core",
         "git",
-        "tfs",
-        "sql server",
+        "nodejs",
+        "html5",
+        "css",
+        "apache",
+        "ngrx",
+        "nginx",
+        "iis",
+        "jest",
+        "javascript/typescript",
+        "playwright",
+        "angular material",
         "oracle",
         "rest",
-        "soap ui",
-        "kibana",
-        "oauth2/jwt",
-        "swagger",
+        "azure devops ci/cd",
         "scrum"
       ]
     },
