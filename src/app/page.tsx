@@ -15,7 +15,7 @@ export default function Home() {
   if (!data) return <p>Loading...</p>;
 
   return (
-    <div className="w-[840mm] h-[1188mm] mx-auto shadow-lg">
+    <div className="flex flex-col w-[840mm] h-[1188mm] mx-auto pb-[10rem] shadow-lg">
       {/* Header */}
       <header className="relative pb-[20rem] pt-[10rem] px-32">
         <div className="clip-path-header w-full h-full absolute top-0 left-0 bg-[#8ea59b]"></div>
@@ -39,7 +39,7 @@ export default function Home() {
       </header>
 
       {/* Content */}
-      <div className="flex w-full h-full pt-[5rem] px-[15rem]">
+      <div className="flex w-full h-full pt-[5rem] px-[15rem] gap-10">
         {/* Left Column */}
         <section className="w-1/3 h-full mr-4 space-y-4 text-gray-600 pt-16 bg-cyan-200">
           <div className="flex items-center gap-3 pt-[6rem]">
