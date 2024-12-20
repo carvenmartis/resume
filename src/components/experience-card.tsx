@@ -10,7 +10,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
     <div className="mb-5">
       <div className="flex justify-between items-center">
         <h4 className="text-black text-[3rem] font-bold">
-          {experience.position}({experience.company})
+          {experience.position} ({experience.company})
         </h4>
         <p className="text-black font-bold text-[2.8em] uppercase">
           {experience.period}

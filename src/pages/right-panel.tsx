@@ -5,7 +5,7 @@ import Experience from "./experience";
 
 const RightPanel = ({ resume }: { resume: ResumeProps }) => {
   return (
-    <section className="flex-grow h-full bg-orange-300">
+    <section className="flex-grow h-full ">
       <Profile profile={resume.profile} className="mb-10" />
 
       <Experience experiences={resume.experiences} />

@@ -11,10 +11,12 @@ export interface ContactProps {
   email: string;
 }
 
-export interface EducationProps {
+export interface DegreeProps {
   degree: string;
   school: string;
   city: string;
+  startDate: string;
+  endDate: string;
 }
 
 export interface CertificationProps {
@@ -43,7 +45,7 @@ export interface ExperienceProps {
 export interface ResumeProps {
   profile: ProfileProps;
   contact: ContactProps;
-  educations: EducationProps[];
+  degrees: DegreeProps[];
   certifications: CertificationProps[];
   skills: SkillsProps;
   experiences: ExperienceProps[];
@@ -63,11 +65,13 @@ export const ResumeData: ResumeProps = {
     phone: "+31 (0) 6 48 36 55 55",
     email: "carven.martis@hotmail.com",
   },
-  educations: [
+  degrees: [
     {
       degree: "HBO Technische Informatica",
       school: "Avans Hogeschool",
       city: "Breda",
+      startDate: "2010",
+      endDate: "2015",
     },
   ],
   certifications: [
@@ -89,13 +93,12 @@ export const ResumeData: ResumeProps = {
       "Blazor",
       "Angular",
       "TypeScript",
-      // Add remaining skills...
     ],
-    languages: ["Dutch", "English"],
+    languages: ["Dutch", "English", "Spanish"],
   },
   experiences: [
     {
-      position: "Fullstack Developer & DevOps Engineer",
+      position: ".NET Developer",
       company: "Rabobank",
       period: "2022 – 2024",
       description:
