@@ -12,7 +12,12 @@ const Education: React.FC<EducationProps> = ({ degrees }) => {
       <h3 className="text-black">Education</h3>
       <ul>
         {degrees.map((degree, index) => (
-          <CardItem key={index} {...degree} year={degree.endDate} />
+          <CardItem
+            key={index}
+            {...degree}
+            organization={degree.school}
+            year={degree.endDate}
+          />
         ))}
       </ul>
     </div>

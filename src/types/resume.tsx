@@ -76,22 +76,26 @@ export const ResumeData: ResumeProps = {
     },
   ],
   certifications: [
-    { title: "Azure Developer Associate", company: "Microsoft", date: "2024" },
     {
-      title: "Azure Administrator Associate",
+      title: "AZ-400 Designing and Implementing Microsoft DevOps",
       company: "Microsoft",
       date: "2024",
     },
     {
-      title: "Microsoft Certified: Azure Solutions Architect Expert",
+      title: "AZ-204 Azure Developer Associate",
       company: "Microsoft",
       date: "2024",
     },
-    { title: "Azure Fundamentals", company: "Microsoft", date: "2021 " },
+    {
+      title: "AZ-104 Azure Administrator Associate",
+      company: "Microsoft",
+      date: "2024",
+    },
+    { title: "AZ-900 Azure Fundamentals", company: "Microsoft", date: "2021 " },
     { title: "Scrum Master (PSM 1)", company: "Scrum.org", date: "2021" },
     { title: "Embedded Linux", company: "Vijfhart", date: "2016" },
     { title: "Design Patterns", company: "CompuTrain", date: "2015" },
-    { title: "Programeren in C++", company: "CompuTrain", date: "201`5" },
+    { title: "Programeren in C++", company: "CompuTrain", date: "2015" },
   ],
   skills: {
     programming: [

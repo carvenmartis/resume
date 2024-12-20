@@ -15,15 +15,15 @@ const CardItem: React.FC<CardItemProps> = ({
 }) => {
   return (
     <li>
-      <p className="font-bold">{title}</p>
+      <p className="font-semibold">{title}</p>
       {(organization || city) && (
-        <p>
+        <p className="font-thin">
           {organization}
           {organization && city && ", "}
           {city}
         </p>
       )}
-      <p>{year}</p>
+      <p className="font-thin">{year}</p>
     </li>
   );
 };
