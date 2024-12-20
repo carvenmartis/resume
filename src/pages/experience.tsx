@@ -6,7 +6,7 @@ const Experience = ({ experiences }: { experiences: Experience[] }) => {
   return (
     <div>
       <h3 className="text-black">Experience</h3>
-      <ul>
+      <ul className="space-y-10">
         {experiences.map((exp, index) => (
           <ExperienceItem key={index} experience={exp} />
         ))}

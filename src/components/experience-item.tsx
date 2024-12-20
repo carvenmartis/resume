@@ -7,26 +7,26 @@ interface ExperienceItemProps {
 
 const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience }) => {
   return (
-    <li className="mb-5">
+    <li>
       <div className="flex justify-between items-center">
         <h4 className="text-black text-[3rem] font-bold">
           {experience.position} ({experience.company})
         </h4>
-        <p className="text-black font-bold text-[2.8em] uppercase">
+        <p className="text-black font-bold text-[3rem] uppercase">
           {experience.period}
         </p>
       </div>
 
-      <p className="text-gray-700 mb-5 text-justify ">
+      <p className="text-gray-700 mb-5 text-justify text-[2.75rem] leading-snug">
         {experience.description}
       </p>
 
-      <p className="text-[2.4rem]">
-        <span className="font-bold">Keywords:</span>{" "}
-        <span className="text-gray-700 text-justify">
+      <div className="">
+        <span className="font-bold text-[2.4rem]">Keywords:</span>{" "}
+        <span className="text-gray-700 text-justify text-2lg text-[2.4rem] leading-snug">
           {experience.technologies.join(", ")}
         </span>
-      </p>
+      </div>
     </li>
   );
 };

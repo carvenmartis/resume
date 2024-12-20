@@ -7,8 +7,7 @@ import { ResumeData } from "@/types/resume";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-[840mm] h-[1188mm] mx-auto pb-[10rem] shadow-lg">
-      {/* Header */}
+    <div className="flex flex-col w-[840mm] h-[1150mm] mx-auto">
       <Header profile={ResumeData.profile} />
 
       <Container>

@@ -10,21 +10,21 @@ const Contact = ({
 }) => {
   return (
     <div className={className}>
-      <div className="flex items-center gap-3 pt-[6rem]">
-        <div className="p-2 bg-[#8ea59b] text-white rounded-full flex justify-center items-center">
-          <i className="bx bxs-map"></i>
+      <div className="flex items-center gap-5 pt-[6rem]">
+        <div className="w-16 h-16 bg-[#8ea59b] text-white rounded-full flex justify-center items-center">
+          <i className="bx bxs-map text-[2rem]"></i>
         </div>
         <p className="">{contact.location}</p>
       </div>
-      <div className="flex items-center gap-3">
-        <div className="p-2 theme-bg-color text-white rounded-full flex justify-center items-center">
-          <i className="bx bxs-phone"></i>
+      <div className="flex items-center gap-5">
+        <div className="w-16 h-16 theme-bg-color text-white rounded-full flex justify-center items-center">
+          <i className="bx bxs-phone text-[2rem]"></i>
         </div>
         <p className="">{contact.phone}</p>
       </div>
-      <div className="flex items-center gap-3">
-        <div className="p-2 theme-bg-color text-white rounded-full flex justify-center items-center">
-          <i className="bx bxs-envelope "></i>
+      <div className="flex items-center gap-5">
+        <div className="w-16 h-16 theme-bg-color text-white rounded-full flex justify-center items-center">
+          <i className="bx bxs-envelope text-[2rem]"></i>
         </div>
         <p className="">{contact.email}</p>
       </div>

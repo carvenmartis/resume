@@ -45,7 +45,8 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  @apply font-sans;
+  font-family: Helvetica, Arial, sans-serif;
   background-color: #fff;
 }
 
@@ -62,7 +63,7 @@ h2 {
 h1,
 h2,
 h3 {
-  font-family: "Helvetica", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
 }
 
@@ -81,7 +82,7 @@ h3 {
 }
 
 p {
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 .letter-spacing {
