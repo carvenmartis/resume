@@ -33,7 +33,7 @@ export interface ResponsibilityProps {
   description: string;
 }
 
-export interface ExperienceProps {
+export interface Experience {
   position: string;
   company: string;
   period: string;
@@ -48,7 +48,7 @@ export interface ResumeProps {
   degrees: DegreeProps[];
   certifications: CertificationProps[];
   skills: SkillsProps;
-  experiences: ExperienceProps[];
+  experiences: Experience[];
 }
 
 // Example usage:

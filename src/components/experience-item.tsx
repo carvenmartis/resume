@@ -1,13 +1,13 @@
-import { ExperienceProps } from "@/types/resume";
+import { Experience } from "@/types/resume";
 import React from "react";
 
-interface ExperienceCardProps {
-  experience: ExperienceProps;
+interface ExperienceItemProps {
+  experience: Experience;
 }
 
-const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
+const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience }) => {
   return (
-    <div className="mb-5">
+    <li className="mb-5">
       <div className="flex justify-between items-center">
         <h4 className="text-black text-[3rem] font-bold">
           {experience.position} ({experience.company})
@@ -27,8 +27,8 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
           {experience.technologies.join(", ")}
         </span>
       </p>
-    </div>
+    </li>
   );
 };
 
-export default ExperienceCard;
+export default ExperienceItem;
