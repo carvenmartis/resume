@@ -6,7 +6,7 @@ const Contact = ({
   className,
 }: {
   contact: ContactProps;
-  className: string;
+  className?: string | "";
 }) => {
   return (
     <div className={className}>

@@ -1,22 +1,29 @@
 import React from "react";
 
 interface CardItemProps {
-  degree: string;
-  school?: string;
-  city: string;
+  title: string;
+  organization?: string;
+  city?: string;
   year?: string;
 }
 
-const CardItem: React.FC<CardItemProps> = ({ degree, school, city, year }) => {
+const CardItem: React.FC<CardItemProps> = ({
+  title,
+  organization,
+  city,
+  year,
+}) => {
   return (
     <li>
-      <div>
-        <p className="font-bold">{degree}</p>
+      <p className="font-bold">{title}</p>
+      {(organization || city) && (
         <p>
-          {school}, {city}
+          {organization}
+          {organization && city && ", "}
+          {city}
         </p>
-        <p>{year}</p>
-      </div>
+      )}
+      <p>{year}</p>
     </li>
   );
 };

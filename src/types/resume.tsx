@@ -12,7 +12,7 @@ export interface ContactProps {
 }
 
 export interface DegreeProps {
-  degree: string;
+  title: string;
   school: string;
   city: string;
   startDate: string;
@@ -20,7 +20,8 @@ export interface DegreeProps {
 }
 
 export interface CertificationProps {
-  name: string;
+  title: string;
+  company: string;
   date: string;
 }
 
@@ -67,7 +68,7 @@ export const ResumeData: ResumeProps = {
   },
   degrees: [
     {
-      degree: "HBO Technische Informatica",
+      title: "HBO Technische Informatica",
       school: "Avans Hogeschool",
       city: "Breda",
       startDate: "2010",
@@ -75,15 +76,22 @@ export const ResumeData: ResumeProps = {
     },
   ],
   certifications: [
-    { name: "Microsoft Certified: Azure Developer Associate", date: "2021" },
+    { title: "Azure Developer Associate", company: "Microsoft", date: "2024" },
     {
-      name: "Microsoft Certified: Azure Administrator Associate",
-      date: "2021",
+      title: "Azure Administrator Associate",
+      company: "Microsoft",
+      date: "2024",
     },
     {
-      name: "Microsoft Certified: Azure Solutions Architect Expert",
-      date: "2021",
+      title: "Microsoft Certified: Azure Solutions Architect Expert",
+      company: "Microsoft",
+      date: "2024",
     },
+    { title: "Azure Fundamentals", company: "Microsoft", date: "2021 " },
+    { title: "Scrum Master (PSM 1)", company: "Scrum.org", date: "2021" },
+    { title: "Embedded Linux", company: "Vijfhart", date: "2016" },
+    { title: "Design Patterns", company: "CompuTrain", date: "2015" },
+    { title: "Programeren in C++", company: "CompuTrain", date: "201`5" },
   ],
   skills: {
     programming: [
