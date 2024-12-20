@@ -54,12 +54,34 @@ i {
   font-size: 3rem;
 }
 
+h1,
+h2 {
+  letter-spacing: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Helvetica", sans-serif;
+  text-transform: uppercase;
+}
+
+h3 {
+  letter-spacing: 0.3rem;
+}
+
+h3 {
+  font-size: 6rem;
+  font-size: bold;
+  margin-bottom: 1rem;
+}
+
 .clip-path-header {
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 .letter-spacing {
