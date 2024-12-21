@@ -124,10 +124,9 @@ export const ResumeData: ResumeProps = {
       "CosmosDB",
       "Table Storage",
       "Dapper",
-      "EF",
-      "Git",
-      "Azure DevOps",
+
       "Jenkins",
+      "Azure DevOps",
       "Docker",
       "Kubernetes",
       "Bicep",
@@ -141,21 +140,22 @@ export const ResumeData: ResumeProps = {
       "xUnit",
       "MSTest",
       "OAuth2",
+      "EF",
       "SOLID",
       "Kibana",
       "Insights",
-      "ElasticSearch",
       "Monitor",
+      "ElasticSearch",
       "Redis Cache",
-      "Service Bus",
       "YAML",
+      "Service Bus",
       "Functions",
+      "Web Apps",
       "Container Apps",
       "Virtual Machines",
-      "Web Apps",
       "API Management",
       "Front Door",
-
+      "Git",
       "Container Registry",
       "Container Apps",
     ],
@@ -167,7 +167,7 @@ export const ResumeData: ResumeProps = {
   },
   experiences: [
     {
-      position: ".NET Developer",
+      position: "Senior Fullstack Developer",
       company: "Rabobank",
       period: "2022 – 2024",
       description:
@@ -212,7 +212,7 @@ export const ResumeData: ResumeProps = {
       ],
     },
     {
-      position: "Fullstack Developer",
+      position: "Senior Fullstack Developer",
       company: "DUO",
       period: "2022 – 2022",
       description:
@@ -338,7 +338,7 @@ export const ResumeData: ResumeProps = {
       ],
     },
     {
-      position: "Fullstack Developer",
+      position: ".NET Developer",
       company: "Aeromath",
       period: "2017 – 2018",
       description:
@@ -374,7 +374,7 @@ export const ResumeData: ResumeProps = {
       ],
     },
     {
-      position: "Fullstack Developer",
+      position: ".NET Developer",
       company: "BE Aerospace",
       period: "2017",
       description:
@@ -413,7 +413,7 @@ export const ResumeData: ResumeProps = {
       ],
     },
     {
-      position: "Software Developer",
+      position: ".NET Developer",
       company: "Altran",
       period: "2015 – 2016",
       description:
@@ -515,7 +515,7 @@ export const ResumeData: ResumeProps = {
       ],
     },
     {
-      position: "Android Mobile Developer",
+      position: "Mobile Developer",
       company: "Label A",
       period: "2012 – 2013",
       description:
