@@ -5,9 +5,9 @@ import Certification from "@/pages/certification";
 import Contact from "@/pages/contact";
 import Education from "@/pages/education";
 import Experience from "@/pages/experience";
-import LeftPanel from "@/pages/left-panel";
+import LeftPanel from "@/components/left-panel";
 import Profile from "@/pages/profile";
-import RightPanel from "@/pages/right-panel";
+import RightPanel from "@/components/right-panel";
 import Skills from "@/pages/skills";
 import { ResumeData } from "@/types/resume";
 
