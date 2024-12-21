@@ -6,7 +6,7 @@ const LanguageItem = ({ language }: { language: LanguageItemProps }) => {
     <li className="text-gray-700 text-justify text-2lg text-[2.4rem] w-full">
       <div className="flex items-center justify-between w-full">
         <p> {language.title}</p>
-        <div className="flex mr-10 gap-4">
+        <div className="flex gap-4">
           {[...Array(5)].map((_, index) => (
             <span
               key={index}
