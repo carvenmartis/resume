@@ -5,48 +5,47 @@ import Certification from "@/pages/certification";
 import Contact from "@/pages/contact";
 import Education from "@/pages/education";
 import Experience from "@/pages/experience";
-import LeftPanel from "@/components/left-panel";
 import Profile from "@/pages/profile";
-import RightPanel from "@/components/right-panel";
 import Skills from "@/pages/skills";
 import { ResumeData } from "@/types/resume";
 import Languages from "@/pages/language";
+import { Panel } from "@/components/panel";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-[840mm] h-[1150mm] mx-auto">
+    <div className="flex flex-col w-[840mm] h-[1188mm] mx-auto">
       <div className="">
         <Header profile={ResumeData.profile} isImage={true} />
 
         <Container>
-          <LeftPanel>
+          <Panel side="left" className="gap-y-[10rem]">
             <Contact contact={ResumeData.contact} className="space-y-5" />
 
             <Education degrees={ResumeData.degrees} />
             <Certification certifications={ResumeData.certifications} />
-          </LeftPanel>
+          </Panel>
 
-          <RightPanel>
+          <Panel side="right">
             <Profile profile={ResumeData.profile} className="mb-10" />
 
             <Experience experiences={ResumeData.experiences.slice(0, 5)} />
-          </RightPanel>
+          </Panel>
         </Container>
         <Footer pageNumber={1} />
       </div>
 
-      <div className="mt-[9rem] ">
+      <div className="mt-[1rem]">
         <Header profile={ResumeData.profile} />
 
         <Container>
-          <LeftPanel>
+          <Panel side="left" className="gap-y-[10rem]">
             <Skills skills={ResumeData.skills.programming} />
             <Languages languages={ResumeData.skills.languages} />
-          </LeftPanel>
+          </Panel>
 
-          <RightPanel>
+          <Panel side="right">
             <Experience experiences={ResumeData.experiences.slice(5)} />
-          </RightPanel>
+          </Panel>
         </Container>
         <Footer pageNumber={2} />
       </div>
