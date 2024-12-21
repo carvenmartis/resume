@@ -1,16 +1,16 @@
-import { ResumeProps } from "@/types/resume";
 import React from "react";
-import Contact from "./contact";
-import Education from "./education";
-import Certification from "./certification";
 
-const LeftPanel = ({ resume }: { resume: ResumeProps }) => {
+interface LeftPanelProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const LeftPanel: React.FC<LeftPanelProps> = ({ children, className }) => {
   return (
-    <section className="w-1/3 h-full mr-4 space-y-[10rem] text-gray-600 pt-16 ">
-      <Contact contact={resume.contact} className="space-y-5" />
-
-      <Education degrees={resume.degrees} />
-      <Certification certifications={resume.certifications} />
+    <section
+      className={`w-1/3 h-full mr-4 space-y-[10rem] text-gray-600 ${className}`}
+    >
+      {children}
     </section>
   );
 };

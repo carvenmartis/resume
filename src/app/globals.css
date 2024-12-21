@@ -20,28 +20,6 @@
     -webkit-print-color-adjust: exact;
     color-adjust: exact;
   }
-  .bg-gray-100 {
-    background-color: #fff;
-  }
-  /* .bg-[#8ea59b] {
-    background-color: #8ea59b !important;
-  } */
-  .text-black {
-    color: #000 !important;
-  }
-  .text-white {
-    color: #fff !important;
-  }
-  .border-white {
-    border-color: #fff !important;
-  }
-  .container {
-    margin: 0;
-    padding: 0;
-  }
-  .clip-path-header {
-    clip-path: none;
-  }
 }
 
 body {

@@ -2,7 +2,12 @@ import { ProfileProps } from "@/types/resume";
 import React from "react";
 import Image from "next/image";
 
-const header = ({ profile }: { profile: ProfileProps }) => {
+interface HeaderProps {
+  profile: ProfileProps;
+  isImage?: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({ profile, isImage }) => {
   return (
     <header className="relative pb-[15rem] pt-[5rem] px-32">
       <div className="clip-path-header w-full h-full absolute top-0 left-0 bg-[#8ea59b]"></div>
@@ -13,17 +18,18 @@ const header = ({ profile }: { profile: ProfileProps }) => {
         </h2>
       </div>
 
-      {/* Profile Picture */}
-      <div className="absolute top-[12rem] right-[30rem] w-[25rem] h-[25rem] rounded-full border-[1.5rem] border-[#fff] overflow-hidden z-10">
-        <Image
-          src="/bg-img.jpg"
-          alt="Profile"
-          className="w-full h-full object-cover "
-          layout="fill"
-        />
-      </div>
+      {isImage && (
+        <div className="absolute top-[12rem] right-[30rem] w-[25rem] h-[25rem] rounded-full border-[1.5rem] border-[#fff] overflow-hidden z-10">
+          <Image
+            src="/bg-img.jpg"
+            alt="Profile"
+            className="w-full h-full object-cover "
+            layout="fill"
+          />
+        </div>
+      )}
     </header>
   );
 };
 
-export default header;
+export default Header;
