@@ -11,7 +11,7 @@ const Certification: React.FC<CertificationComponentProps> = ({
 }) => {
   return (
     <div>
-      <h3 className="text-black">Education</h3>
+      <h3 className="text-black">Trainingen</h3>
       <ul className="space-y-10">
         {certifications.map((certification, index) => (
           <CardItem
