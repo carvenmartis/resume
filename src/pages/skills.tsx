@@ -2,12 +2,17 @@ import React from "react";
 
 const Skills = ({ skills }: { skills: string[] }) => {
   return (
-    <div>
+    <div className="w-[42.5rem]">
       <h3 className="text-black">Skills</h3>
-      <div className="w-[42.3rem]">
-        <span className="text-gray-700 text-justify text-2lg text-[2.4rem] leading-snug">
-          {skills.join(", ")}
-        </span>
+      <div className="flex flex-wrap gap-3">
+        {skills.map((skill, index) => (
+          <span
+            key={index}
+            className="p-3 bg-[#c6d1cd] text-[#fff] text-[2.4rem] truncate rounded-md"
+          >
+            {skill}
+          </span>
+        ))}
       </div>
     </div>
   );
