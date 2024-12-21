@@ -13,8 +13,8 @@ import { Panel } from "@/components/panel";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-[840mm] h-[1188mm] mx-auto">
-      <div className="">
+    <div>
+      <div className="flex flex-col w-[840mm] h-[1188mm] mx-auto">
         <Header profile={ResumeData.profile} isImage={true} />
 
         <Container>
@@ -34,7 +34,7 @@ export default function Home() {
         <Footer pageNumber={1} />
       </div>
 
-      <div className="mt-[1rem]">
+      <div className="flex flex-col w-[840mm] h-[1188mm] mx-auto">
         <Header profile={ResumeData.profile} />
 
         <Container>
