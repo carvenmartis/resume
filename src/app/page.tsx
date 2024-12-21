@@ -40,8 +40,8 @@ export default function Home() {
 
         <Container>
           <LeftPanel>
-            <Skills skills={ResumeData.skills} />
-            <Languages skills={ResumeData.skills} />
+            <Skills skills={ResumeData.skills.programming} />
+            <Languages languages={ResumeData.skills.languages} />
           </LeftPanel>
 
           <RightPanel>
