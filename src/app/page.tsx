@@ -10,6 +10,7 @@ import Profile from "@/pages/profile";
 import RightPanel from "@/components/right-panel";
 import Skills from "@/pages/skills";
 import { ResumeData } from "@/types/resume";
+import Languages from "@/pages/language";
 
 export default function Home() {
   return (
@@ -40,6 +41,7 @@ export default function Home() {
         <Container>
           <LeftPanel>
             <Skills skills={ResumeData.skills} />
+            <Languages skills={ResumeData.skills} />
           </LeftPanel>
 
           <RightPanel>

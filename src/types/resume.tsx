@@ -25,9 +25,14 @@ export interface CertificationProps {
   date: string;
 }
 
+export interface LanguageItemProps {
+  title: string;
+  level: number;
+}
+
 export interface SkillsProps {
   programming: string[];
-  languages: string[];
+  languages: LanguageItemProps[];
 }
 
 export interface ResponsibilityProps {
@@ -141,7 +146,11 @@ export const ResumeData: ResumeProps = {
       "Container Apps",
       "Monitor & Insights",
     ],
-    languages: ["Dutch", "English", "Spanish"],
+    languages: [
+      { title: "Dutch", level: 5 },
+      { title: "English", level: 4 },
+      { title: "Spanish", level: 3 },
+    ],
   },
   experiences: [
     {
