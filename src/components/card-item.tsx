@@ -14,7 +14,7 @@ const CardItem: React.FC<CardItemProps> = ({
   year,
 }) => {
   return (
-    <li>
+    <li className="shadow-xl p-5 bg-white rounded-lg">
       <p className="font-semibold">{title}</p>
       {(organization || city) && (
         <p className="font-thin">
