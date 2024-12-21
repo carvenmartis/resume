@@ -8,7 +8,7 @@ const Skills = ({ skills }: { skills: string[] }) => {
         {skills.map((skill, index) => (
           <span
             key={index}
-            className="p-3 bg-[#c6d1cd] text-[#fff] text-[2.4rem] truncate rounded-md"
+            className="p-3 bg-[#c6d1cd] text-gray-700 text-[2.4rem] truncate rounded-md"
           >
             {skill}
           </span>
