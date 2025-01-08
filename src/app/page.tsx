@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div>
       <div className="flex flex-col w-[840mm] h-[1188mm] mx-auto">
-        <Header profile={ResumeData.profile} isImage={true} />
+        <Header profile={ResumeData.profile} image={ResumeData.profile.image} />
 
         <Container>
           <Panel side="left" className="gap-y-[10rem]">

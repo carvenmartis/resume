@@ -4,10 +4,10 @@ import Image from "next/image";
 
 interface HeaderProps {
   profile: ProfileProps;
-  isImage?: boolean;
+  image?: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ profile, isImage }) => {
+const Header: React.FC<HeaderProps> = ({ profile, image }) => {
   return (
     <header className="relative pb-[15rem] pt-[5rem] px-32">
       <div className="clip-path-header w-full h-full absolute top-0 left-0 bg-[#8ea59b]"></div>
@@ -18,10 +18,10 @@ const Header: React.FC<HeaderProps> = ({ profile, isImage }) => {
         </h2>
       </div>
 
-      {isImage && (
+      {image && (
         <div className="absolute top-[12rem] right-[30rem] w-[25rem] h-[25rem] rounded-full border-[1.5rem] border-[#fff] overflow-hidden z-10">
           <Image
-            src="/bg-img.jpg"
+            src={image}
             alt="Profile"
             className="w-full h-full object-cover "
             layout="fill"
