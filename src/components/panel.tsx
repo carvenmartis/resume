@@ -3,14 +3,14 @@ export const Panel = ({
   className = "",
   children,
 }: {
-  side: "left" | "right";
+  side: "left" | "right" | "center";
   className?: string;
   children: React.ReactNode;
 }) => {
   return (
     <div
       className={`flex flex-col ${
-        side === "left" ? "w-1/4" : "w-3/4 "
+        side === "left" ? "w-1/4" : side === "right" ? "w-3/4" : ""
       } ${className}`}
     >
       {children}

@@ -1,18 +1,16 @@
 import ExperienceItem from "@/components/experience-item";
-import type { Experience } from "@/types/resume";
+import type { HobbyProps } from "@/types/resume";
 import React from "react";
 
-const Experience = ({ experiences }: { experiences: Experience[] }) => {
+const Hobby = ({ experiences }: { experiences: HobbyProps[] }) => {
   return (
-    <div>
-      <h3 className="text-black">Experience</h3>
+    <div className="mb-20">
+      <h3 className="text-black">Hobby&apos;s</h3>
       <ul className="space-y-10">
         {experiences.map((exp, index) => (
           <ExperienceItem
             key={index}
-            name={exp.position}
-            company={exp.company}
-            period={exp.period}
+            name={exp.name}
             description={exp.description}
             technologies={exp.technologies}
           />
@@ -22,4 +20,4 @@ const Experience = ({ experiences }: { experiences: Experience[] }) => {
   );
 };
 
-export default Experience;
+export default Hobby;
