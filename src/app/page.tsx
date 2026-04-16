@@ -1,16 +1,16 @@
 import Container from "@/components/content";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import Certification from "@/pages/certification";
-import Contact from "@/pages/contact";
-import Education from "@/pages/education";
-import Experience from "@/pages/experience";
-import Profile from "@/pages/profile";
-import Skills from "@/pages/skills";
+import Certification from "@/sections/certification";
+import Contact from "@/sections/contact";
+import Education from "@/sections/education";
+import Experience from "@/sections/experience";
+import Profile from "@/sections/profile";
+import Skills from "@/sections/skills";
 import { ResumeData } from "@/types/resume";
-import Languages from "@/pages/language";
+import Languages from "@/sections/language";
 import { Panel } from "@/components/panel";
-import Hobby from "@/pages/hobby";
+import Hobby from "@/sections/hobby";
 
 export default function Home() {
   return (

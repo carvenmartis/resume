@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -23,7 +21,6 @@
 }
 
 body {
-  @apply font-sans;
   font-family: "Lato", Arial, sans-serif;
   background-color: #fff;
 }
