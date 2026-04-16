@@ -9,7 +9,7 @@ interface EducationProps {
 const Education: React.FC<EducationProps> = ({ degrees }) => {
   return (
     <div>
-      <h3 className="text-black">Education</h3>
+      <h3>Education</h3>
       <ul>
         {degrees.map((degree, index) => (
           <CardItem

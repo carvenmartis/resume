@@ -18,7 +18,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
   return (
     <li>
       <div className="flex justify-between items-center">
-        <h4 className="text-black text-[3rem] font-bold">
+        <h4 className="text-[3rem] font-bold">
           {name} {company && `(${company})`}
         </h4>
         {period && (
@@ -53,7 +53,7 @@ export default ExperienceItem;
 //   return (
 //     <li>
 //       <div className="flex justify-between items-center">
-//         <h4 className="text-black text-[3rem] font-bold">
+//         <h4 className="text-[3rem] font-bold">
 //           {experience.position} ({experience.company})
 //         </h4>
 //         <p className="text-black font-bold text-[3rem] uppercase">

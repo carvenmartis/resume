@@ -15,11 +15,11 @@ import Hobby from "@/sections/hobby";
 export default function Home() {
   return (
     <div>
-      <div className="flex flex-col w-[840mm] h-[1188mm] mx-auto">
+      <div className="resume-page flex flex-col w-[840mm] h-[1188mm] mx-auto">
         <Header profile={ResumeData.profile} image={ResumeData.profile.image} />
 
         <Container>
-          <Panel side="left" className="gap-y-[10rem]">
+          <Panel side="left" className="gap-y-40">
             <Contact contact={ResumeData.contact} className="space-y-5" />
 
             <Education degrees={ResumeData.degrees} />
@@ -35,11 +35,11 @@ export default function Home() {
         <Footer pageNumber={1} />
       </div>
 
-      <div className="flex flex-col w-[840mm] h-[1188mm] mx-auto">
+      <div className="resume-page flex flex-col w-[840mm] h-[1188mm] mx-auto">
         <Header profile={ResumeData.profile} />
 
         <Container>
-          <Panel side="left" className="gap-y-[10rem]">
+          <Panel side="left" className="gap-y-40">
             <Skills skills={ResumeData.skills.programming} />
             <Languages languages={ResumeData.skills.languages} />
           </Panel>
@@ -51,7 +51,7 @@ export default function Home() {
         <Footer pageNumber={2} />
       </div>
 
-      <div className="flex flex-col w-[840mm] h-[1188mm] mx-auto">
+      <div className="resume-page flex flex-col w-[840mm] h-[1188mm] mx-auto">
         <Header profile={ResumeData.profile} />
 
         <Container>

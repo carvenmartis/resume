@@ -5,7 +5,7 @@ import React from "react";
 const Hobby = ({ experiences }: { experiences: HobbyProps[] }) => {
   return (
     <div className="mb-20">
-      <h3 className="text-black">Hobby&apos;s</h3>
+      <h3>Hobby&apos;s</h3>
       <ul className="space-y-10">
         {experiences.map((exp, index) => (
           <ExperienceItem

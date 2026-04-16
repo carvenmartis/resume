@@ -3,7 +3,7 @@ import React from "react";
 const Skills = ({ skills }: { skills: string[] }) => {
   return (
     <div>
-      <h3 className="text-black">Skills</h3>
+      <h3>Skills</h3>
       <div className="flex flex-wrap gap-3">
         {skills.map((skill, index) => (
           <span
@@ -13,7 +13,7 @@ const Skills = ({ skills }: { skills: string[] }) => {
                 ? "ml-auto"
                 : index === skills.length - 1
                 ? "mr-auto"
-                : "flex-grow"
+                : "grow"
             }`}
           >
             {skill}

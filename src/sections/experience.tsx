@@ -5,7 +5,7 @@ import React from "react";
 const Experience = ({ experiences }: { experiences: Experience[] }) => {
   return (
     <div>
-      <h3 className="text-black">Experience</h3>
+      <h3>Experience</h3>
       <ul className="space-y-10">
         {experiences.map((exp, index) => (
           <ExperienceItem
