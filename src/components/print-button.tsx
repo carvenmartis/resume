@@ -6,10 +6,6 @@ export default function PrintButton() {
 
   async function handleDownload() {
     setLoading(true)
-
-    let previewEl: HTMLElement | null = null
-    let prevZoom = ''
-
     try {
       const [{ default: html2canvas }, { jsPDF }] = await Promise.all([
         import('html2canvas-pro'),
@@ -20,15 +16,6 @@ export default function PrintButton() {
         document.querySelectorAll<HTMLElement>('.resume-page')
       )
 
-      // Temporarily reset zoom so html2canvas captures the full-resolution layout
-      previewEl = document.querySelector<HTMLElement>('.preview-scale')
-      if (previewEl) {
-        prevZoom = previewEl.style.zoom
-        previewEl.style.zoom = '1'
-        // Wait for the browser to re-layout at full scale
-        await new Promise((r) => setTimeout(r, 80))
-      }
-
       const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
 
       for (let i = 0; i < pages.length; i++) {
@@ -37,14 +24,17 @@ export default function PrintButton() {
           useCORS: true,
           allowTaint: true,
           logging: false,
-          onclone: (_doc, el) => {
-            el.querySelectorAll('*').forEach((node) => {
+          onclone: (doc, el) => {
+            // Reset zoom on the cloned preview container so html2canvas
+            // captures the full-resolution layout without touching the live DOM
+            const previewScale = doc.querySelector<HTMLElement>('.preview-scale')
+            if (previewScale) previewScale.style.zoom = '1'
+
+            // Strip all dark: classes so the PDF is always light mode
+            ;[el, ...Array.from(el.querySelectorAll('*'))].forEach((node) => {
               node.classList.forEach((cls) => {
                 if (cls.startsWith('dark:')) node.classList.remove(cls)
               })
-            })
-            el.classList.forEach((cls) => {
-              if (cls.startsWith('dark:')) el.classList.remove(cls)
             })
           },
         })
@@ -57,7 +47,6 @@ export default function PrintButton() {
     } catch (err) {
       console.error('PDF generation failed', err)
     } finally {
-      if (previewEl) previewEl.style.zoom = prevZoom
       setLoading(false)
     }
   }
