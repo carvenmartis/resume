@@ -8,7 +8,7 @@ const Skills = ({ skills }: { skills: string[] }) => {
         {skills.map((skill, index) => (
           <span
             key={index}
-            className={`p-3 bg-[#c6d1cd] text-gray-700 text-[2.4rem] rounded-md flex-none text-center ${
+            className={`p-3 bg-[#c6d1cd] dark:bg-[#2a2a2a] text-gray-700 dark:text-gray-200 text-[2.4rem] rounded-md flex-none text-center ${
               index === 0
                 ? "ml-auto"
                 : index === skills.length - 1

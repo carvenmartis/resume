@@ -19,20 +19,20 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
     <li>
       <div className="flex justify-between items-center">
         <h4 className="text-[3rem] font-bold">
-          {name} {company && `(${company})`}
+          <span className="dark:text-gray-100">{name} {company && `(${company})`}</span>
         </h4>
         {period && (
-          <p className="text-black font-bold text-[3rem] uppercase">{period}</p>
+          <p className="text-black dark:text-gray-100 font-bold text-[3rem] uppercase">{period}</p>
         )}
       </div>
 
-      <p className="text-gray-700 mb-5 text-justify text-[2.75rem] leading-snug">
+      <p className="text-gray-700 dark:text-gray-300 mb-5 text-justify text-[2.75rem] leading-snug">
         {description}
       </p>
 
       <div>
         <span className="font-bold text-[2.4rem]">Keywords:</span>
-        <span className="text-gray-700 text-justify text-2lg text-[2.4rem] leading-snug">
+        <span className="text-gray-700 dark:text-gray-300 text-justify text-2lg text-[2.4rem] leading-snug">
           {technologies.join(", ")}
         </span>
       </div>
@@ -61,13 +61,13 @@ export default ExperienceItem;
 //         </p>
 //       </div>
 
-//       <p className="text-gray-700 mb-5 text-justify text-[2.75rem] leading-snug">
+//       <p className="text-gray-700 dark:text-gray-300 mb-5 text-justify text-[2.75rem] leading-snug">
 //         {experience.description}
 //       </p>
 
 //       <div className="">
 //         <span className="font-bold text-[2.4rem]">Keywords:</span>{" "}
-//         <span className="text-gray-700 text-justify text-2lg text-[2.4rem] leading-snug">
+//         <span className="text-gray-700 dark:text-gray-300 text-justify text-2lg text-[2.4rem] leading-snug">
 //           {experience.technologies.join(", ")}
 //         </span>
 //       </div>

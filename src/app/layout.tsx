@@ -22,11 +22,11 @@ export default function RootLayout({
       </head>
       <body className="flex h-screen overflow-hidden bg-gray-100 dark:bg-gray-950">
         <aside className="w-72 min-w-72 h-full bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-700 overflow-y-auto p-6 flex flex-col gap-4">
-          <h2 className="text-lg font-semibold text-gray-700 dark:text-white">Resume Editor</h2>
-          <p className="text-sm text-gray-400 dark:text-gray-300">Settings panel coming soon.</p>
+          <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100">Resume Editor</h2>
+          <p className="text-sm text-gray-500 dark:text-gray-400">Settings panel coming soon.</p>
           <PrintButton />
         </aside>
-        <main className="flex-1 h-full overflow-y-auto bg-gray-400 dark:bg-gray-800 flex flex-col items-center">
+        <main className="flex-1 h-full overflow-y-auto bg-gray-300 dark:bg-gray-950 flex flex-col items-center">
           <div className="preview-scale">
             {children}
           </div>

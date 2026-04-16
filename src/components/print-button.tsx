@@ -37,6 +37,16 @@ export default function PrintButton() {
           useCORS: true,
           allowTaint: true,
           logging: false,
+          onclone: (_doc, el) => {
+            el.querySelectorAll('*').forEach((node) => {
+              node.classList.forEach((cls) => {
+                if (cls.startsWith('dark:')) node.classList.remove(cls)
+              })
+            })
+            el.classList.forEach((cls) => {
+              if (cls.startsWith('dark:')) el.classList.remove(cls)
+            })
+          },
         })
 
         if (i > 0) pdf.addPage()

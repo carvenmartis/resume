@@ -17,13 +17,13 @@ const CardItem: React.FC<CardItemProps> = ({
     <li className="space-y-3">
       <p className="font-semibold">{title}</p>
       {(organization || city) && (
-        <p className="font-thin">
+        <p className="font-thin dark:text-gray-400">
           {organization}
           {organization && city && ", "}
           {city}
         </p>
       )}
-      <p className="font-thin">{year}</p>
+      <p className="font-thin dark:text-gray-400">{year}</p>
     </li>
   );
 };

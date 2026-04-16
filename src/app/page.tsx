@@ -15,7 +15,7 @@ import Hobby from "@/sections/hobby";
 export default function Home() {
   return (
     <div>
-      <div className="resume-page flex flex-col w-[840mm] h-[1188mm] mx-auto">
+      <div className="resume-page bg-white dark:bg-[#111111] text-[#171717] dark:text-[#f1f5f3] flex flex-col w-[840mm] h-[1188mm] mx-auto">
         <Header profile={ResumeData.profile} image={ResumeData.profile.image} />
 
         <Container>
@@ -35,7 +35,7 @@ export default function Home() {
         <Footer pageNumber={1} />
       </div>
 
-      <div className="resume-page flex flex-col w-[840mm] h-[1188mm] mx-auto">
+      <div className="resume-page bg-white dark:bg-[#111111] text-[#171717] dark:text-[#f1f5f3] flex flex-col w-[840mm] h-[1188mm] mx-auto">
         <Header profile={ResumeData.profile} />
 
         <Container>
@@ -51,7 +51,7 @@ export default function Home() {
         <Footer pageNumber={2} />
       </div>
 
-      <div className="resume-page flex flex-col w-[840mm] h-[1188mm] mx-auto">
+      <div className="resume-page bg-white dark:bg-[#111111] text-[#171717] dark:text-[#f1f5f3] flex flex-col w-[840mm] h-[1188mm] mx-auto">
         <Header profile={ResumeData.profile} />
 
         <Container>

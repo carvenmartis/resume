@@ -8,26 +8,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #fff;
-  }
-
-  body {
-    background-color: #030712;
-  }
-
-  aside {
-    background-color: #111827;
-    border-color: #374151;
-    color: #f9fafb;
-  }
-
-  aside h2 {
-    color: #ffffff;
-  }
-
-  aside p {
-    color: #d1d5db;
+    --background: #111827;
+    --foreground: #f9fafb;
   }
 }
 
@@ -144,6 +126,10 @@ p {
 
 .resume-page {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35), 0 1px 4px rgba(0, 0, 0, 0.2);
-  background: white;
-  color: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  .resume-page {
+    box-shadow: 0 4px 28px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.5);
+  }
 }
