@@ -3,12 +3,13 @@ export interface ProfileProps {
   prefix: string;
   title: string;
   summary: string;
+  image?: string;
 }
 
 export interface ContactProps {
-  location: string;
-  phone: string;
-  email: string;
+  location?: string;
+  phone?: string;
+  email?: string;
 }
 
 export interface DegreeProps {
@@ -39,6 +40,12 @@ export interface ResponsibilityProps {
   description: string;
 }
 
+export interface HobbyProps {
+  name: string;
+  description: string;
+  technologies: string[];
+}
+
 export interface Experience {
   position: string;
   company: string;
@@ -55,6 +62,7 @@ export interface ResumeProps {
   certifications: CertificationProps[];
   skills: SkillsProps;
   experiences: Experience[];
+  hobbies: HobbyProps[];
 }
 
 // Example usage:
@@ -63,13 +71,16 @@ export const ResumeData: ResumeProps = {
     name: "Carven Martis",
     prefix: ".NET Developer",
     title: "Senior Fullstack Developer & DevOps Engineer",
+    image: "/bg-img.jpg",
+    // summary:
+    //   "Ik ben een gedreven fullstack developer met ruim 10 jaar ervaring in het ontwikkelen van software. Mijn expertise ligt in het ontwerpen, implementeren en optimaliseren van zowel front-end als back-end softwareoplossingen, met een sterke focus op C#, TypeScript en frameworks zoals Angular, React en Blazor. Ik ben een proactieve teamspeler met sterke communicatieve vaardigheden en een probleemoplossend vermogen. Mijn doel is om mijn expertise en vaardigheden in te zetten om bij te dragen aan de groei en het succes van projecten.",
     summary:
-      "Als software developer met een sterke DevOps mindset heb ik ruime ervaring met het ontwerpen, bouwen en optimaliseren van complexe applicaties. Ik heb expertise in C#, Blazor, Angular, on-premise, Azure Cloud en processautomatisering met een focus op het leveren van betrouwbare en toekomstgerichte oplossingen.  In een agile/scrum omgeving neem ik verantwoordelijkheid voor end to end ontwikkeling, kennisdeling binnen teams en het continue verbeteren van processen om maximale waarde voor gebruikers te creeren.",
+      "Ik ben een gedreven fullstack developer met ruim 10 jaar ervaring in softwareontwikkeling. Ik heb uitgebreide ervaring in het ontwikkelen van zowel backend als frontend oplossingen. Graag zet ik mijn expertise in om een bijdrage te leveren aan het doorontwikkelen van innovatieve en efficiente softwareoplossingen. Naast mijn werk blijf ik graag op de hoogte van de nieuwste technieken door deel te nemen aan IT evenementen en persoonlijke projecten waarin ik nieuwe concepten en innovaties kan verkennen. Mijn drijfveer? Samenwerken aan oplossingen die impact maken.",
   },
   contact: {
     location: "Zoetermeer, Netherlands",
-    phone: "+31 (0) 6 48 36 55 55",
-    email: "carven.martis@hotmail.com",
+    phone: "+31 6 48 36 55 55",
+    email: "carven.martis@gmail.com",
   },
   degrees: [
     {
@@ -81,11 +92,11 @@ export const ResumeData: ResumeProps = {
     },
   ],
   certifications: [
-    {
-      title: "AZ-400 Designing and Implementing Microsoft DevOps",
-      company: "Microsoft",
-      date: "2024",
-    },
+    // {
+    //   title: "AZ-400 Designing and Implementing Microsoft DevOps",
+    //   company: "Microsoft",
+    //   date: "2024",
+    // },
     {
       title: "AZ-204 Azure Developer Associate",
       company: "Microsoft",
@@ -123,8 +134,8 @@ export const ResumeData: ResumeProps = {
       "MySQL",
       "CosmosDB",
       "Table Storage",
-      "Dapper",
-
+      "SOAP",
+      "Web Forms",
       "Jenkins",
       "Azure DevOps",
       "Docker",
@@ -165,16 +176,50 @@ export const ResumeData: ResumeProps = {
       { title: "Spanish", level: 3 },
     ],
   },
+  hobbies: [
+    {
+      name: "Azure Generative AI",
+      description:
+        "Ik ben gefascineerd door generative AI en wilde graag meer leren over de mogelijkheden ervan. De applicatie maakt gebruik van Azure AI Studio om notities te analyseren, samenvattingen te genereren en relevante tags toe te voegen. De frontend is gebouwd met NextJS, en de backend gebruikt een .NET API. Azure Table Storage wordt gebruikt voor het opslaan van notities.",
+      technologies: [
+        ".NET Core",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Vercel",
+        "Docker",
+        "Azure.Data.Tables",
+        "Azure Functions",
+        "Azure Blob Storage",
+        "Azure AI Studio",
+        "Azure DevOps",
+        "CI/CD",
+      ],
+    },
+    {
+      name: "AWS Cloud backend",
+      description:
+        "Een statische website gebouwd en gehost in AWS S3 als statische webhosting. Voor de backend heb ik .NET gebruikt om serverless functionaliteit te creëren met AWS Lambda, en API Gateway ingericht om een snelle en veilige interactie tussen de frontend en backend te realiseren.",
+      technologies: [
+        ".NET Core",
+        "React",
+        "AWS Lambda",
+        "AWS S3",
+        "AWS API Gateway",
+        "AWS CloudFront",
+      ],
+    },
+  ],
   experiences: [
     {
-      position: "Senior Fullstack Developer",
+      position: "Fullstack Developer",
       company: "Rabobank",
       period: "2022 – 2024",
       description:
-        "Bij Rabobank was ik verantwoordelijk voor het ontwerpen en implementeren van containerized .NET-applicaties en een Angular-dashboard dat inzicht biedt in de compliance van projecten en pipelines binnen Azure DevOps. Daarnaast ondersteunde ik andere teams bij de ontwikkeling en optimalisatie van hun Angular-applicaties. In samenwerking met Microsoft werkte ik aan een optimale integratie met de Azure DevOps API's, waarmee het complianceproces werd geautomatiseerd.",
+        "Bij Rabobank was ik verantwoordelijk voor het ontwerpen en implementeren van containerized .NET-applicaties en een React dashboard als extension dat inzicht biedt in de compliance van projecten en pipelines binnen Azure DevOps. Daarnaast ondersteunde ik andere teams bij de ontwikkeling en optimalisatie van hun frontend applicaties. In samenwerking met Microsoft werkte ik aan een optimale integratie met de Azure DevOps API's, waarmee het complianceproces werd geautomatiseerd.",
       responsibilities: [
         "Ontwikkelen van containerized microservices met C# en .NET Core",
-        "Ontwerpen en implementeren van een Angular-dashboard met TypeScript, RxJS en NgRx",
+        "Ontwerpen en implementeren van een React dashboard met TypeScript, RxJS en NgRx",
         "Toepassen van clean architecture en OWASP-beveiligingsrichtlijnen",
         "Inrichten en beheren van Azure DevOps-projecten met de juiste permissies",
         "Ontwikkelen van Azure DevOps-extensies en Infrastructure as Code met Bicep en Terraform",
@@ -184,39 +229,52 @@ export const ResumeData: ResumeProps = {
       technologies: [
         "C#",
         ".NET Core 6/8",
-        "Angular",
+        "React",
+        "Redux",
+        "Axios",
         "TypeScript",
-        "RxJS",
-        "NgRx",
+        "Azure DevOps UI",
+        "EsLint",
+        "Prettier",
+        "Webpack",
+        "ESLint",
+        "Jest",
+        "Storybook",
         "SOLID",
         "Docker",
-        "Azure Container Registry",
         "Azure DevOps",
         "Bicep/Terraform",
         "Redis Cache",
         "Service Bus",
-        "Functions",
-        "Container Registry",
-        "Container Apps",
-        "Monitor & Insights",
+        "Azure Functions",
+        "Azure Container Apps",
+        "Application Insights",
+        "Azure Key Vault",
+        "Azure Configuration Store",
+        "Azure API Management",
+        "Azure Table Storage",
         "OAuth2/JWT",
         "Moq/NSubstitute",
         "FluentValidations",
         "Jest",
+        "Storybook",
         "xUnit",
         "FluentAssertions",
         "SonarQube",
         "TDD/DDD",
-        "SpecFlow/Playwright",
+        "SpecFlow",
+        "Playwright",
         "Git",
+        "Nexus Lifecycle Dependency",
+        "Checkmarx",
       ],
     },
     {
-      position: "Senior Fullstack Developer",
+      position: "Fullstack Developer",
       company: "DUO",
       period: "2022 – 2022",
       description:
-        "Bij DUO was ik verantwoordelijk voor het ontwikkelen, uitbreiden en moderniseren van portalen met Blazor en Angular, daarnaast beheerde ik bestaande MVC en WCF applicatie. Deze applicaties stelden onderwijsinstellingen in staat om aanvragen in te dienen en het beheren van hun gegevens. Tot slot heb ik CI/CD pipelines ingericht in Jenkins en was verantwoordelijk voor het beheren van de OTAP omgevingen.",
+        "Bij DUO was ik verantwoordelijk voor het ontwikkelen, uitbreiden en moderniseren van portalen met Blazor en React, daarnaast beheerde ik bestaande MVC en WCF applicatie. Deze applicaties stelden onderwijsinstellingen in staat om aanvragen in te dienen en het beheren van hun gegevens. Tot slot heb ik CI/CD pipelines ingericht in Jenkins en was verantwoordelijk voor het beheren van de OTAP omgevingen.",
       responsibilities: [
         "Developing and maintaining frontend applications using Angular",
         "Designing and building backend services and RESTful APIs in .NET Core",
@@ -226,15 +284,28 @@ export const ResumeData: ResumeProps = {
       ],
       technologies: [
         "C#",
-        ".NET Core 3/4.5",
+        ".NET Core",
         "ASP.NET MVC",
         "WCF",
+        "SOAP",
         "Angular",
+        "NgRx",
+        "RxJS",
+        "Jest",
+        "Axios",
+        "ESLint",
+        "Jest",
+        "Storybook",
+        "Prettier",
+        "Bootstrap",
+        "HTML 5",
+        "CSS",
+        "SCSS",
         "Blazor",
         "SQL Server",
         "Oracle",
         "Entity Framework Core",
-        "Azure DevOps (CI/CD)",
+        "Azure DevOps",
         "PowerShell",
         "SonarQube",
         "SpecFlow",
@@ -246,13 +317,14 @@ export const ResumeData: ResumeProps = {
         "OAuth",
         "Kibana",
         "xUnit",
+        "Snyk",
         "MSTest",
         "FluentAssertions",
         "Scrum",
       ],
     },
     {
-      position: "Senior Fullstack Developer",
+      position: "Fullstack Developer",
       company: "AkzoNobel",
       period: "2021 – 2022",
       description:
@@ -277,7 +349,10 @@ export const ResumeData: ResumeProps = {
         "SQL Server",
         "CosmosDB",
         "Entity Framework Core",
-        "Azure",
+        "Azure Functions",
+        "Application Insights",
+        "Azure Web Apps",
+        "Azure Key Vault",
         "Azure DevOps CI/CD",
         "Swagger",
         "Bicep",
@@ -292,7 +367,7 @@ export const ResumeData: ResumeProps = {
       ],
     },
     {
-      position: "Senior Fullstack Developer",
+      position: "Fullstack Developer",
       company: "Medux",
       period: "2017 – 2021",
       description:
@@ -311,18 +386,19 @@ export const ResumeData: ResumeProps = {
         "C#",
         ".NET Core 2.1/3",
         "Entity Framework Core",
+        "WCF",
+        "SOAP",
         "WinForms",
         "DevExpress",
+        "Snyk",
         "AngularJS",
         "Bootstrap",
         "SQL Server",
-        "EF",
         "MySQL",
         "RabbitMQ",
         "Kibana",
         "Azure DevOps",
         "Docker",
-        "Kubernetes",
         "Moq",
         "SOAP UI",
         "SpecFlow",
@@ -354,7 +430,6 @@ export const ResumeData: ResumeProps = {
       technologies: [
         "C#",
         "ASP.NET",
-        ".NET Framework 4.5",
         "WPF",
         "MVC",
         "MVVM",
@@ -392,6 +467,8 @@ export const ResumeData: ResumeProps = {
         "ASP.NET",
         "WinForms",
         "NHibernate",
+        "WCF",
+        "SOAP",
         "Ninject",
         "SOLID",
         ".NET Framework 4.5",
@@ -458,14 +535,11 @@ export const ResumeData: ResumeProps = {
         "C++",
         "CTest",
         "Qt",
-        "Qt Linguist",
         "CMake",
         "Virtual Machine",
         "Linux",
-        "Bash scripts",
         "QML",
         "XML",
-        "Pub-Sub",
         "Z-Wave",
         "SSH",
         "Jenkins",
@@ -507,7 +581,7 @@ export const ResumeData: ResumeProps = {
         "Socket.io",
         "CLI",
         "HTML5",
-        "CSS/SASS",
+        "CSS",
         "GitLab",
         "Monorepo",
         "Java",
