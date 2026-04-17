@@ -30,7 +30,7 @@ export default async function ResumePage({ searchParams }: { searchParams: Promi
     <>
       <ThemeStyleInjector theme={theme} />
       {autoDownload && <AutoDownloadPdf />}
-      <div className="min-h-screen bg-gray-200 flex flex-col items-center">
+      <div className="min-h-screen bg-gray-200 dark:bg-black flex flex-col items-center">
         <div className="preview-scale">
         <ResumeDocument
           profile={profile}

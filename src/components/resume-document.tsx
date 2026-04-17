@@ -25,7 +25,7 @@ interface ResumeDocumentProps {
 export default function ResumeDocument({ profile, contact, degrees, certifications, skills, experiences, hobbies }: ResumeDocumentProps) {
   return (
     <div>
-      <div className="resume-page bg-white text-[#171717] flex flex-col w-[840mm] h-[1188mm] mx-auto">
+      <div className="resume-page bg-white dark:bg-[#111111] text-[#171717] dark:text-[#f1f5f3] flex flex-col w-[840mm] h-[1188mm] mx-auto">
         <Header profile={profile} image={profile.image} />
         <Container>
           <Panel side="left" className="gap-y-40">
@@ -42,7 +42,7 @@ export default function ResumeDocument({ profile, contact, degrees, certificatio
         <Footer pageNumber={1} />
       </div>
 
-      <div className="resume-page bg-white text-[#171717] flex flex-col w-[840mm] h-[1188mm] mx-auto">
+      <div className="resume-page bg-white dark:bg-[#111111] text-[#171717] dark:text-[#f1f5f3] flex flex-col w-[840mm] h-[1188mm] mx-auto">
         <Header profile={profile} />
         <Container>
           <Panel side="left" className="gap-y-40">
@@ -56,7 +56,7 @@ export default function ResumeDocument({ profile, contact, degrees, certificatio
         <Footer pageNumber={2} />
       </div>
 
-      <div className="resume-page bg-white text-[#171717] flex flex-col w-[840mm] h-[1188mm] mx-auto">
+      <div className="resume-page bg-white dark:bg-[#111111] text-[#171717] dark:text-[#f1f5f3] flex flex-col w-[840mm] h-[1188mm] mx-auto">
         <Header profile={profile} />
         <Container>
           <Panel side="center">

@@ -265,7 +265,7 @@ export function EditorShell({ children }: { children: React.ReactNode }) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 40 }}
             transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-            className="flex-1 h-full overflow-y-auto bg-gray-300 dark:bg-gray-950 flex flex-col items-center"
+            className="flex-1 h-full overflow-y-auto bg-gray-200 dark:bg-black flex flex-col items-center"
           >
             <div className="preview-scale">
               {children}
