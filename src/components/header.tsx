@@ -12,7 +12,7 @@ const Header: React.FC<HeaderProps> = ({ profile, image }) => {
     <header className="relative pb-[15rem] pt-[5rem] px-32">
       <div className="clip-path-header w-full h-full absolute top-0 left-0 bg-[#8ea59b]"></div>
       <div className="relative justify-start items-center pl-14">
-        <h1 className="text-[8rem] font-normal">{profile.name}</h1>
+        <h1 className="text-[8rem] font-normal">{profile.firstName} {profile.lastName}</h1>
         <h2 className="text-[4.5rem] font-light">
           {profile.prefix}
         </h2>

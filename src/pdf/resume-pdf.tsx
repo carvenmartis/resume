@@ -258,7 +258,7 @@ function PDFHeader({ profile, image }: { profile: ProfileProps; image?: string }
         />
       </Svg>
       <View style={s.headerText}>
-        <Text style={s.headerName}>{profile.name}</Text>
+        <Text style={s.headerName}>{profile.firstName} {profile.lastName}</Text>
         <Text style={s.headerPrefix}>{profile.prefix}</Text>
       </View>
       {image && <Image style={s.headerImage} src={image} />}

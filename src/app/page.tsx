@@ -1,3 +1,5 @@
+'use client'
+
 import Container from "@/components/content";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
@@ -11,23 +13,25 @@ import { ResumeData } from "@/types/resume";
 import Languages from "@/sections/language";
 import { Panel } from "@/components/panel";
 import Hobby from "@/sections/hobby";
+import { useResume } from "@/context/resume-context";
 
 export default function Home() {
+  const { profile } = useResume();
+
   return (
     <div>
       <div className="resume-page bg-white dark:bg-[#111111] text-[#171717] dark:text-[#f1f5f3] flex flex-col w-[840mm] h-[1188mm] mx-auto">
-        <Header profile={ResumeData.profile} image={ResumeData.profile.image} />
+        <Header profile={profile} image={profile.image} />
 
         <Container>
           <Panel side="left" className="gap-y-40">
             <Contact contact={ResumeData.contact} className="space-y-5" />
-
             <Education degrees={ResumeData.degrees} />
             <Certification certifications={ResumeData.certifications} />
           </Panel>
 
           <Panel side="right">
-            <Profile profile={ResumeData.profile} className="mb-20" />
+            <Profile profile={profile} className="mb-20" />
             <Hobby experiences={ResumeData.hobbies} />
             <Experience experiences={ResumeData.experiences.slice(0, 3)} />
           </Panel>
@@ -36,7 +40,7 @@ export default function Home() {
       </div>
 
       <div className="resume-page bg-white dark:bg-[#111111] text-[#171717] dark:text-[#f1f5f3] flex flex-col w-[840mm] h-[1188mm] mx-auto">
-        <Header profile={ResumeData.profile} />
+        <Header profile={profile} />
 
         <Container>
           <Panel side="left" className="gap-y-40">
@@ -52,7 +56,7 @@ export default function Home() {
       </div>
 
       <div className="resume-page bg-white dark:bg-[#111111] text-[#171717] dark:text-[#f1f5f3] flex flex-col w-[840mm] h-[1188mm] mx-auto">
-        <Header profile={ResumeData.profile} />
+        <Header profile={profile} />
 
         <Container>
           <Panel side="center">

@@ -1,5 +1,6 @@
 export interface ProfileProps {
-  name: string;
+  firstName: string;
+  lastName: string;
   prefix: string;
   title: string;
   summary: string;
@@ -68,14 +69,14 @@ export interface ResumeProps {
 // Example usage:
 export const ResumeData: ResumeProps = {
   profile: {
-    name: "Carven Martis",
+    firstName: "Carven",
+    lastName: "Martis",
     prefix: ".NET Developer",
     title: "Senior Fullstack Developer & DevOps Engineer",
     image: "/bg-img.jpg",
     // summary:
     //   "Ik ben een gedreven fullstack developer met ruim 10 jaar ervaring in het ontwikkelen van software. Mijn expertise ligt in het ontwerpen, implementeren en optimaliseren van zowel front-end als back-end softwareoplossingen, met een sterke focus op C#, TypeScript en frameworks zoals Angular, React en Blazor. Ik ben een proactieve teamspeler met sterke communicatieve vaardigheden en een probleemoplossend vermogen. Mijn doel is om mijn expertise en vaardigheden in te zetten om bij te dragen aan de groei en het succes van projecten.",
-    summary:
-      "Ik ben een gedreven fullstack developer met ruim 10 jaar ervaring in softwareontwikkeling. Ik heb uitgebreide ervaring in het ontwikkelen van zowel backend als frontend oplossingen. Graag zet ik mijn expertise in om een bijdrage te leveren aan het doorontwikkelen van innovatieve en efficiente softwareoplossingen. Naast mijn werk blijf ik graag op de hoogte van de nieuwste technieken door deel te nemen aan IT evenementen en persoonlijke projecten waarin ik nieuwe concepten en innovaties kan verkennen. Mijn drijfveer? Samenwerken aan oplossingen die impact maken.",
+    summary: "sIk ben een gedreven fullstack developer met ruim 10 jaar ervaring in softwareontwikkeling. Ik heb uitgebreide ervaring in het ontwikkelen van zowel backend als frontend oplossingen. Graag zet ik mijn expertise in om een bijdrage te leveren aan het doorontwikkelen van innovatieve en efficiente softwareoplossingen. Naast mijn werk blijf ik graag op de hoogte van de nieuwste technieken door deel te nemen aan IT evenementen en persoonlijke projecten waarin ik nieuwe concepten en innovaties kan verkennen. Mijn drijfveer? Samenwerken aan oplossingen die impact maken.sssssssssssssss",
   },
   contact: {
     location: "Zoetermeer, Netherlands",
