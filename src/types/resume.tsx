@@ -56,6 +56,24 @@ export interface Experience {
   technologies: string[];
 }
 
+export interface ThemeProps {
+  accentColor: string
+  fontFamily: string
+}
+
+export const DEFAULT_THEME: ThemeProps = {
+  accentColor: '#8ea59b',
+  fontFamily: 'Lato',
+}
+
+export const FONT_OPTIONS = [
+  { label: 'Lato', value: 'Lato' },
+  { label: 'Playfair Display', value: 'Playfair Display' },
+  { label: 'Montserrat', value: 'Montserrat' },
+  { label: 'Raleway', value: 'Raleway' },
+  { label: 'Cormorant Garamond', value: 'Cormorant Garamond' },
+]
+
 export interface ResumeProps {
   profile: ProfileProps;
   contact: ContactProps;

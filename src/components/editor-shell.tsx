@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ResumeProvider, useResume } from '@/context/resume-context'
 import NameEditor from '@/components/name-editor'
+import ProfileImageEditor from '@/components/profile-image-editor'
 import EditorTextarea from '@/components/editor-textarea'
 import ContactEditor from '@/components/contact-editor'
 import EducationEditor from '@/components/education-editor'
@@ -12,6 +13,7 @@ import SkillsEditor from '@/components/skills-editor'
 import LanguageEditor from '@/components/language-editor'
 import ExperienceEditor from '@/components/experience-editor'
 import PrintButton from '@/components/print-button'
+import ThemeEditor from '@/components/theme-editor'
 import { updateProfileSummary } from '@/app/actions'
 
 function CollapsibleSection({
@@ -86,7 +88,7 @@ function CollapsibleSection({
 }
 
 function EditorSidebar({ previewOpen, onTogglePreview }: { previewOpen: boolean; onTogglePreview: () => void }) {
-  const { profile, setProfile, contact, setContact, degrees, setDegrees, certifications, setCertifications, skills, setSkills, experiences, setExperiences } = useResume()
+  const { profile, setProfile, contact, setContact, degrees, setDegrees, certifications, setCertifications, skills, setSkills, experiences, setExperiences, theme, setTheme } = useResume()
   const [collapseAll, setCollapseAll] = useState(0)
 
   const toggleBtn = (
@@ -124,7 +126,14 @@ function EditorSidebar({ previewOpen, onTogglePreview }: { previewOpen: boolean;
         <>
           <div className="flex-1 flex flex-col gap-5 p-6 pt-10 overflow-y-auto">
             <h2 className="text-sm font-semibold text-gray-800 dark:text-gray-100">Resume Editor</h2>
+            <CollapsibleSection forceClose={collapseAll} label="Theme" compact>
+              <ThemeEditor theme={theme} onChange={setTheme} />
+            </CollapsibleSection>
             <CollapsibleSection forceClose={collapseAll} label="Profile" compact>
+              <ProfileImageEditor
+                image={profile.image}
+                onChange={image => setProfile({ ...profile, image })}
+              />
               <NameEditor
                 firstName={profile.firstName}
                 lastName={profile.lastName}
@@ -169,7 +178,16 @@ function EditorSidebar({ previewOpen, onTogglePreview }: { previewOpen: boolean;
               <h2 className="text-sm font-semibold text-gray-800 dark:text-gray-100">Resume Editor</h2>
               <div className="grid grid-cols-3 gap-8">
                 <div className="flex flex-col gap-4">
+                  <CollapsibleSection forceClose={collapseAll} label="Theme">
+                    <ThemeEditor theme={theme} onChange={setTheme} />
+                  </CollapsibleSection>
+                </div>
+                <div className="flex flex-col gap-4">
                   <CollapsibleSection forceClose={collapseAll} label="Profile">
+                    <ProfileImageEditor
+                      image={profile.image}
+                      onChange={image => setProfile({ ...profile, image })}
+                    />
                     <NameEditor
                       firstName={profile.firstName}
                       lastName={profile.lastName}

@@ -4,6 +4,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --theme-color: #8ea59b;
+  --resume-font: 'Lato', Arial, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -102,7 +103,7 @@
 }
 
 body {
-  font-family: "Lato", Arial, sans-serif;
+  font-family: var(--resume-font);
   background-color: var(--background);
   color: var(--foreground);
 }
@@ -152,6 +153,12 @@ p {
 .theme-bg-color {
   background-color: var(--theme-color);
 }
+
+.font-preview-Lato                { font-family: 'Lato', Arial, sans-serif; }
+.font-preview-Playfair\ Display   { font-family: 'Playfair Display', serif; }
+.font-preview-Montserrat          { font-family: 'Montserrat', Arial, sans-serif; }
+.font-preview-Raleway             { font-family: 'Raleway', Arial, sans-serif; }
+.font-preview-Cormorant\ Garamond { font-family: 'Cormorant Garamond', serif; }
 
 .preview-scale {
   zoom: 0.35;

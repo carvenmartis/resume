@@ -1,7 +1,7 @@
 'use client'
 
 import { createContext, useContext, useState, useEffect } from 'react'
-import { CertificationProps, ContactProps, DegreeProps, Experience, ProfileProps, ResumeData, SkillsProps } from '@/types/resume'
+import { CertificationProps, ContactProps, DegreeProps, Experience, ProfileProps, ResumeData, SkillsProps, ThemeProps, DEFAULT_THEME } from '@/types/resume'
 import { loadOverrides } from '@/app/actions'
 
 interface ResumeContextValue {
@@ -11,12 +11,14 @@ interface ResumeContextValue {
   certifications: CertificationProps[]
   skills: SkillsProps
   experiences: Experience[]
+  theme: ThemeProps
   setProfile: (v: ProfileProps) => void
   setContact: (v: ContactProps) => void
   setDegrees: (v: DegreeProps[]) => void
   setCertifications: (v: CertificationProps[]) => void
   setSkills: (v: SkillsProps) => void
   setExperiences: (v: Experience[]) => void
+  setTheme: (v: ThemeProps) => void
 }
 
 const ResumeContext = createContext<ResumeContextValue>({
@@ -26,12 +28,14 @@ const ResumeContext = createContext<ResumeContextValue>({
   certifications: ResumeData.certifications,
   skills: ResumeData.skills,
   experiences: ResumeData.experiences,
+  theme: DEFAULT_THEME,
   setProfile: () => {},
   setContact: () => {},
   setDegrees: () => {},
   setCertifications: () => {},
   setSkills: () => {},
   setExperiences: () => {},
+  setTheme: () => {},
 })
 
 export const useResume = () => useContext(ResumeContext)
@@ -43,6 +47,7 @@ export function ResumeProvider({ children }: { children: React.ReactNode }) {
   const [certifications, setCertifications] = useState<CertificationProps[]>(ResumeData.certifications)
   const [skills, setSkills] = useState<SkillsProps>(ResumeData.skills)
   const [experiences, setExperiences] = useState<Experience[]>(ResumeData.experiences)
+  const [theme, setTheme] = useState<ThemeProps>(DEFAULT_THEME)
 
   useEffect(() => {
     loadOverrides().then(o => {
@@ -52,11 +57,17 @@ export function ResumeProvider({ children }: { children: React.ReactNode }) {
       if (o.certifications) setCertifications(o.certifications)
       if (o.skills) setSkills(o.skills)
       if (o.experiences) setExperiences(o.experiences)
+      if (o.theme) setTheme(o.theme)
     })
   }, [])
 
+  useEffect(() => {
+    document.documentElement.style.setProperty('--theme-color', theme.accentColor)
+    document.documentElement.style.setProperty('--resume-font', `'${theme.fontFamily}', Arial, sans-serif`)
+  }, [theme.accentColor, theme.fontFamily])
+
   return (
-    <ResumeContext.Provider value={{ profile, contact, degrees, certifications, skills, experiences, setProfile, setContact, setDegrees, setCertifications, setSkills, setExperiences }}>
+    <ResumeContext.Provider value={{ profile, contact, degrees, certifications, skills, experiences, theme, setProfile, setContact, setDegrees, setCertifications, setSkills, setExperiences, setTheme }}>
       {children}
     </ResumeContext.Provider>
   )

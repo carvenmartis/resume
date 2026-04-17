@@ -2,7 +2,7 @@
 
 import fs from 'fs'
 import path from 'path'
-import type { ProfileProps, ContactProps, DegreeProps, CertificationProps, SkillsProps, Experience } from '@/types/resume'
+import type { ProfileProps, ContactProps, DegreeProps, CertificationProps, SkillsProps, Experience, ThemeProps } from '@/types/resume'
 
 const DATA_FILE = path.join(process.cwd(), 'data/resume.json')
 
@@ -23,8 +23,15 @@ export async function loadOverrides(): Promise<{
   certifications?: CertificationProps[]
   skills?: SkillsProps
   experiences?: Experience[]
+  theme?: ThemeProps
 }> {
   return readData() as ReturnType<typeof loadOverrides> extends Promise<infer T> ? T : never
+}
+
+export async function updateTheme(theme: ThemeProps) {
+  const data = readData()
+  data.theme = theme
+  writeData(data)
 }
 
 export async function updateProfileName(firstName: string, lastName: string) {
@@ -66,5 +73,19 @@ export async function updateSkills(skills: SkillsProps) {
 export async function updateExperiences(experiences: Experience[]) {
   const data = readData()
   data.experiences = experiences
+  writeData(data)
+}
+
+export async function updateProfileImage(image: string) {
+  const data = readData()
+  data.profile = { ...(data.profile as object ?? {}), image }
+  writeData(data)
+}
+
+export async function removeProfileImage() {
+  const data = readData()
+  const profile = { ...(data.profile as Record<string, unknown> ?? {}) }
+  delete profile.image
+  data.profile = profile
   writeData(data)
 }
