@@ -18,6 +18,7 @@ const sortByDate = (certs: CertificationProps[]) =>
 
 export default function TrainingEditor({ certifications, onChange }: TrainingEditorProps) {
   const keysRef = useRef<number[]>(certifications.map((_, i) => i))
+  while (keysRef.current.length < certifications.length) keysRef.current.push(Date.now() + keysRef.current.length)
   const [collapsed, setCollapsed] = useState<Set<number>>(new Set(certifications.map((_, i) => i)))
 
   const toggle = (key: number) =>

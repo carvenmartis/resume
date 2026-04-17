@@ -169,7 +169,6 @@ export const ResumeData: ResumeProps = {
       "Front Door",
       "Git",
       "Container Registry",
-      "Container Apps",
     ],
     languages: [
       { title: "Dutch", level: 5 },

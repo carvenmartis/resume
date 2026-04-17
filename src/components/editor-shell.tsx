@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ResumeProvider, useResume } from '@/context/resume-context'
 import NameEditor from '@/components/name-editor'
@@ -8,25 +8,48 @@ import EditorTextarea from '@/components/editor-textarea'
 import ContactEditor from '@/components/contact-editor'
 import EducationEditor from '@/components/education-editor'
 import TrainingEditor from '@/components/training-editor'
+import SkillsEditor from '@/components/skills-editor'
+import LanguageEditor from '@/components/language-editor'
+import ExperienceEditor from '@/components/experience-editor'
 import PrintButton from '@/components/print-button'
 import { updateProfileSummary } from '@/app/actions'
 
 function CollapsibleSection({
   label,
   compact = false,
+  forceClose = 0,
   children,
 }: {
   label: string
   compact?: boolean
+  forceClose?: number
   children: React.ReactNode
 }) {
-  const [open, setOpen] = useState(true)
+  const storageKey = `section-open:${label}`
+  const [open, setOpen] = useState(() => {
+    if (typeof window === 'undefined') return true
+    const stored = localStorage.getItem(storageKey)
+    return stored === null ? false : stored === 'true'
+  })
+
+  useEffect(() => {
+    if (forceClose > 0) {
+      setOpen(false)
+      localStorage.setItem(storageKey, 'false')
+    }
+  }, [forceClose]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  const toggle = () => {
+    const next = !open
+    setOpen(next)
+    localStorage.setItem(storageKey, String(next))
+  }
 
   return (
     <div className="flex flex-col">
       <button
         type="button"
-        onClick={() => setOpen(v => !v)}
+        onClick={toggle}
         className={`flex items-center justify-between w-full text-left group ${
           compact
             ? 'pt-2 border-t border-gray-100 dark:border-gray-800'
@@ -63,17 +86,28 @@ function CollapsibleSection({
 }
 
 function EditorSidebar({ previewOpen, onTogglePreview }: { previewOpen: boolean; onTogglePreview: () => void }) {
-  const { profile, setProfile, contact, setContact, degrees, setDegrees, certifications, setCertifications } = useResume()
+  const { profile, setProfile, contact, setContact, degrees, setDegrees, certifications, setCertifications, skills, setSkills, experiences, setExperiences } = useResume()
+  const [collapseAll, setCollapseAll] = useState(0)
 
   const toggleBtn = (
-    <button
-      type="button"
-      onClick={onTogglePreview}
-      title={previewOpen ? 'Collapse preview' : 'Expand preview'}
-      className="p-1.5 rounded text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-    >
-      <i className={`bx ${previewOpen ? 'bx-layout' : 'bx-expand-alt'} text-[0.9rem]`} />
-    </button>
+    <div className="flex items-center gap-1">
+      <button
+        type="button"
+        onClick={() => setCollapseAll(v => v + 1)}
+        title="Collapse all sections"
+        className="p-1.5 rounded text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+      >
+        <i className="bx bx-collapse-alt text-[0.9rem]" />
+      </button>
+      <button
+        type="button"
+        onClick={onTogglePreview}
+        title={previewOpen ? 'Collapse preview' : 'Expand preview'}
+        className="p-1.5 rounded text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+      >
+        <i className={`bx ${previewOpen ? 'bx-layout' : 'bx-expand-alt'} text-[0.9rem]`} />
+      </button>
+    </div>
   )
 
   return (
@@ -90,7 +124,7 @@ function EditorSidebar({ previewOpen, onTogglePreview }: { previewOpen: boolean;
         <>
           <div className="flex-1 flex flex-col gap-5 p-6 pt-10 overflow-y-auto">
             <h2 className="text-sm font-semibold text-gray-800 dark:text-gray-100">Resume Editor</h2>
-            <CollapsibleSection label="Profile" compact>
+            <CollapsibleSection forceClose={collapseAll} label="Profile" compact>
               <NameEditor
                 firstName={profile.firstName}
                 lastName={profile.lastName}
@@ -105,14 +139,23 @@ function EditorSidebar({ previewOpen, onTogglePreview }: { previewOpen: boolean;
                 onPersist={value => updateProfileSummary(value)}
               />
             </CollapsibleSection>
-            <CollapsibleSection label="Contact" compact>
+            <CollapsibleSection forceClose={collapseAll} label="Contact" compact>
               <ContactEditor contact={contact} onChange={setContact} />
             </CollapsibleSection>
-            <CollapsibleSection label="Education" compact>
+            <CollapsibleSection forceClose={collapseAll} label="Education" compact>
               <EducationEditor degrees={degrees} onChange={setDegrees} />
             </CollapsibleSection>
-            <CollapsibleSection label="Training" compact>
+            <CollapsibleSection forceClose={collapseAll} label="Training" compact>
               <TrainingEditor certifications={certifications} onChange={setCertifications} />
+            </CollapsibleSection>
+            <CollapsibleSection forceClose={collapseAll} label="Skills" compact>
+              <SkillsEditor skills={skills} onChange={setSkills} />
+            </CollapsibleSection>
+            <CollapsibleSection forceClose={collapseAll} label="Languages" compact>
+              <LanguageEditor skills={skills} onChange={setSkills} />
+            </CollapsibleSection>
+            <CollapsibleSection forceClose={collapseAll} label="Experience" compact>
+              <ExperienceEditor experiences={experiences} onChange={setExperiences} />
             </CollapsibleSection>
           </div>
           <div className="p-6 border-t border-gray-200 dark:border-gray-700">
@@ -126,7 +169,7 @@ function EditorSidebar({ previewOpen, onTogglePreview }: { previewOpen: boolean;
               <h2 className="text-sm font-semibold text-gray-800 dark:text-gray-100">Resume Editor</h2>
               <div className="grid grid-cols-3 gap-8">
                 <div className="flex flex-col gap-4">
-                  <CollapsibleSection label="Profile">
+                  <CollapsibleSection forceClose={collapseAll} label="Profile">
                     <NameEditor
                       firstName={profile.firstName}
                       lastName={profile.lastName}
@@ -143,18 +186,31 @@ function EditorSidebar({ previewOpen, onTogglePreview }: { previewOpen: boolean;
                   </CollapsibleSection>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <CollapsibleSection label="Contact">
+                  <CollapsibleSection forceClose={collapseAll} label="Contact">
                     <ContactEditor contact={contact} onChange={setContact} />
                   </CollapsibleSection>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <CollapsibleSection label="Education">
+                  <CollapsibleSection forceClose={collapseAll} label="Education">
                     <EducationEditor degrees={degrees} onChange={setDegrees} />
                   </CollapsibleSection>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <CollapsibleSection label="Training">
+                  <CollapsibleSection forceClose={collapseAll} label="Training">
                     <TrainingEditor certifications={certifications} onChange={setCertifications} />
+                  </CollapsibleSection>
+                </div>
+                <div className="flex flex-col gap-4">
+                  <CollapsibleSection forceClose={collapseAll} label="Skills">
+                    <SkillsEditor skills={skills} onChange={setSkills} />
+                  </CollapsibleSection>
+                  <CollapsibleSection forceClose={collapseAll} label="Languages">
+                    <LanguageEditor skills={skills} onChange={setSkills} />
+                  </CollapsibleSection>
+                </div>
+                <div className="flex flex-col gap-4 col-span-2">
+                  <CollapsibleSection forceClose={collapseAll} label="Experience">
+                    <ExperienceEditor experiences={experiences} onChange={setExperiences} />
                   </CollapsibleSection>
                 </div>
               </div>

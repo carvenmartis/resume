@@ -15,6 +15,7 @@ const EMPTY_DEGREE: DegreeProps = { title: '', school: '', city: '', startDate: 
 
 export default function EducationEditor({ degrees, onChange }: EducationEditorProps) {
   const keysRef = useRef<number[]>(degrees.map((_, i) => i))
+  while (keysRef.current.length < degrees.length) keysRef.current.push(Date.now() + keysRef.current.length)
   const [collapsed, setCollapsed] = useState<Set<number>>(new Set(degrees.map((_, i) => i)))
 
   const toggle = (key: number) =>

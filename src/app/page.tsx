@@ -16,7 +16,7 @@ import Hobby from "@/sections/hobby";
 import { useResume } from "@/context/resume-context";
 
 export default function Home() {
-  const { profile, contact, degrees, certifications } = useResume();
+  const { profile, contact, degrees, certifications, skills, experiences } = useResume();
 
   return (
     <div>
@@ -33,7 +33,7 @@ export default function Home() {
           <Panel side="right">
             <Profile profile={profile} className="mb-20" />
             <Hobby experiences={ResumeData.hobbies} />
-            <Experience experiences={ResumeData.experiences.slice(0, 3)} />
+            <Experience experiences={experiences.slice(0, 3)} />
           </Panel>
         </Container>
         <Footer pageNumber={1} />
@@ -44,12 +44,12 @@ export default function Home() {
 
         <Container>
           <Panel side="left" className="gap-y-40">
-            <Skills skills={ResumeData.skills.programming} />
-            <Languages languages={ResumeData.skills.languages} />
+            <Skills skills={skills.programming} />
+            <Languages languages={skills.languages} />
           </Panel>
 
           <Panel side="right">
-            <Experience experiences={ResumeData.experiences.slice(3, 9)} />
+            <Experience experiences={experiences.slice(3, 9)} />
           </Panel>
         </Container>
         <Footer pageNumber={2} />
@@ -60,7 +60,7 @@ export default function Home() {
 
         <Container>
           <Panel side="center">
-            <Experience experiences={ResumeData.experiences.slice(9)} />
+            <Experience experiences={experiences.slice(9)} />
           </Panel>
         </Container>
         <Footer pageNumber={3} />

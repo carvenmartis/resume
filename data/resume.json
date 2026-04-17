@@ -61,5 +61,77 @@
       "company": "CompuTrain",
       "date": "2015"
     }
-  ]
+  ],
+  "skills": {
+    "programming": [
+      "C#",
+      ".NET Core",
+      "ASP.NET",
+      "Blazor",
+      "Angular",
+      "RxJS",
+      "NgRx",
+      "Bootstrap",
+      "Storybook",
+      "Material Design",
+      "NPM",
+      "TypeScript",
+      "JavaScript",
+      "HTML5",
+      "CSS",
+      "SQL",
+      "MySQL",
+      "CosmosDB",
+      "Table Storage",
+      "SOAP",
+      "Web Forms",
+      "Jenkins",
+      "Azure DevOps",
+      "Docker",
+      "Kubernetes",
+      "Bicep",
+      "Terraform",
+      "Swagger",
+      "TDD",
+      "SonarQube",
+      "SpecFlow",
+      "Playwright",
+      "Jest",
+      "xUnit",
+      "MSTest",
+      "OAuth2",
+      "EF",
+      "SOLID",
+      "Kibana",
+      "Insights",
+      "Monitor",
+      "ElasticSearch",
+      "Redis Cache",
+      "YAML",
+      "Service Bus",
+      "Functions",
+      "Web Apps",
+      "Container Apps",
+      "Virtual Machines",
+      "API Management",
+      "Front Door",
+      "Git",
+      "Container Registry",
+      "Container Apps"
+    ],
+    "languages": [
+      {
+        "title": "Dutch",
+        "level": 5
+      },
+      {
+        "title": "English",
+        "level": 4
+      },
+      {
+        "title": "Spanish",
+        "level": 3
+      }
+    ]
+  }
 }

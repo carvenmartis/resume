@@ -1,7 +1,7 @@
 'use client'
 
 import { createContext, useContext, useState, useEffect } from 'react'
-import { CertificationProps, ContactProps, DegreeProps, ProfileProps, ResumeData } from '@/types/resume'
+import { CertificationProps, ContactProps, DegreeProps, Experience, ProfileProps, ResumeData, SkillsProps } from '@/types/resume'
 import { loadOverrides } from '@/app/actions'
 
 interface ResumeContextValue {
@@ -9,10 +9,14 @@ interface ResumeContextValue {
   contact: ContactProps
   degrees: DegreeProps[]
   certifications: CertificationProps[]
-  setProfile: (profile: ProfileProps) => void
-  setContact: (contact: ContactProps) => void
-  setDegrees: (degrees: DegreeProps[]) => void
-  setCertifications: (certifications: CertificationProps[]) => void
+  skills: SkillsProps
+  experiences: Experience[]
+  setProfile: (v: ProfileProps) => void
+  setContact: (v: ContactProps) => void
+  setDegrees: (v: DegreeProps[]) => void
+  setCertifications: (v: CertificationProps[]) => void
+  setSkills: (v: SkillsProps) => void
+  setExperiences: (v: Experience[]) => void
 }
 
 const ResumeContext = createContext<ResumeContextValue>({
@@ -20,10 +24,14 @@ const ResumeContext = createContext<ResumeContextValue>({
   contact: ResumeData.contact,
   degrees: ResumeData.degrees,
   certifications: ResumeData.certifications,
+  skills: ResumeData.skills,
+  experiences: ResumeData.experiences,
   setProfile: () => {},
   setContact: () => {},
   setDegrees: () => {},
   setCertifications: () => {},
+  setSkills: () => {},
+  setExperiences: () => {},
 })
 
 export const useResume = () => useContext(ResumeContext)
@@ -33,18 +41,22 @@ export function ResumeProvider({ children }: { children: React.ReactNode }) {
   const [contact, setContact] = useState<ContactProps>(ResumeData.contact)
   const [degrees, setDegrees] = useState<DegreeProps[]>(ResumeData.degrees)
   const [certifications, setCertifications] = useState<CertificationProps[]>(ResumeData.certifications)
+  const [skills, setSkills] = useState<SkillsProps>(ResumeData.skills)
+  const [experiences, setExperiences] = useState<Experience[]>(ResumeData.experiences)
 
   useEffect(() => {
-    loadOverrides().then(overrides => {
-      if (overrides.profile) setProfile(prev => ({ ...prev, ...overrides.profile }))
-      if (overrides.contact) setContact(prev => ({ ...prev, ...overrides.contact }))
-      if (overrides.degrees) setDegrees(overrides.degrees)
-      if (overrides.certifications) setCertifications(overrides.certifications)
+    loadOverrides().then(o => {
+      if (o.profile) setProfile(prev => ({ ...prev, ...o.profile }))
+      if (o.contact) setContact(prev => ({ ...prev, ...o.contact }))
+      if (o.degrees) setDegrees(o.degrees)
+      if (o.certifications) setCertifications(o.certifications)
+      if (o.skills) setSkills(o.skills)
+      if (o.experiences) setExperiences(o.experiences)
     })
   }, [])
 
   return (
-    <ResumeContext.Provider value={{ profile, contact, degrees, certifications, setProfile, setContact, setDegrees, setCertifications }}>
+    <ResumeContext.Provider value={{ profile, contact, degrees, certifications, skills, experiences, setProfile, setContact, setDegrees, setCertifications, setSkills, setExperiences }}>
       {children}
     </ResumeContext.Provider>
   )
