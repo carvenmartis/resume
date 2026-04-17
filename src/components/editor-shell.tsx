@@ -15,6 +15,7 @@ import ExperienceEditor from '@/components/experience-editor'
 import PrintButton from '@/components/print-button'
 import ExportJsonButton from '@/components/export-json-button'
 import ThemeEditor from '@/components/theme-editor'
+import QrCodeButton from '@/components/qr-code-button'
 import { updateProfileSummary } from '@/app/actions'
 
 function CollapsibleSection({
@@ -29,11 +30,12 @@ function CollapsibleSection({
   children: React.ReactNode
 }) {
   const storageKey = `section-open:${label}`
-  const [open, setOpen] = useState(() => {
-    if (typeof window === 'undefined') return true
+  const [open, setOpen] = useState(false)
+
+  useEffect(() => {
     const stored = localStorage.getItem(storageKey)
-    return stored === null ? false : stored === 'true'
-  })
+    if (stored === 'true') setOpen(true)
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (forceClose > 0) {
@@ -94,6 +96,7 @@ function EditorSidebar({ previewOpen, onTogglePreview }: { previewOpen: boolean;
 
   const toggleBtn = (
     <div className="flex items-center gap-1">
+      <QrCodeButton />
       <button
         type="button"
         onClick={() => setCollapseAll(v => v + 1)}
