@@ -16,7 +16,7 @@ import Hobby from "@/sections/hobby";
 import { useResume } from "@/context/resume-context";
 
 export default function Home() {
-  const { profile, contact, degrees } = useResume();
+  const { profile, contact, degrees, certifications } = useResume();
 
   return (
     <div>
@@ -27,7 +27,7 @@ export default function Home() {
           <Panel side="left" className="gap-y-40">
             <Contact contact={contact} className="space-y-5" />
             <Education degrees={degrees} />
-            <Certification certifications={ResumeData.certifications} />
+            <Certification certifications={certifications} />
           </Panel>
 
           <Panel side="right">

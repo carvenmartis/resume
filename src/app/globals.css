@@ -107,8 +107,8 @@ body {
   color: var(--foreground);
 }
 
-p,
-i {
+.resume-page p,
+.resume-page i {
   font-size: 3rem;
 }
 

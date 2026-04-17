@@ -2,7 +2,7 @@
 
 import fs from 'fs'
 import path from 'path'
-import type { ProfileProps, ContactProps, DegreeProps } from '@/types/resume'
+import type { ProfileProps, ContactProps, DegreeProps, CertificationProps } from '@/types/resume'
 
 const DATA_FILE = path.join(process.cwd(), 'data/resume.json')
 
@@ -20,6 +20,7 @@ export async function loadOverrides(): Promise<{
   profile?: Partial<ProfileProps>
   contact?: Partial<ContactProps>
   degrees?: DegreeProps[]
+  certifications?: CertificationProps[]
 }> {
   return readData() as ReturnType<typeof loadOverrides> extends Promise<infer T> ? T : never
 }
@@ -45,5 +46,11 @@ export async function updateContact(contact: Partial<ContactProps>) {
 export async function updateDegrees(degrees: DegreeProps[]) {
   const data = readData()
   data.degrees = degrees
+  writeData(data)
+}
+
+export async function updateCertifications(certifications: CertificationProps[]) {
+  const data = readData()
+  data.certifications = certifications
   writeData(data)
 }

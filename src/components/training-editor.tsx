@@ -2,20 +2,23 @@
 
 import { useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { updateDegrees } from '@/app/actions'
-import { DegreeProps } from '@/types/resume'
+import { updateCertifications } from '@/app/actions'
+import { CertificationProps } from '@/types/resume'
 import EditorInput from '@/components/editor-input'
 
-interface EducationEditorProps {
-  degrees: DegreeProps[]
-  onChange: (degrees: DegreeProps[]) => void
+interface TrainingEditorProps {
+  certifications: CertificationProps[]
+  onChange: (certifications: CertificationProps[]) => void
 }
 
-const EMPTY_DEGREE: DegreeProps = { title: '', school: '', city: '', startDate: '', endDate: '' }
+const EMPTY: CertificationProps = { title: '', company: '', date: '' }
 
-export default function EducationEditor({ degrees, onChange }: EducationEditorProps) {
-  const keysRef = useRef<number[]>(degrees.map((_, i) => i))
-  const [collapsed, setCollapsed] = useState<Set<number>>(new Set(degrees.map((_, i) => i)))
+const sortByDate = (certs: CertificationProps[]) =>
+  [...certs].sort((a, b) => (parseInt(b.date) || 0) - (parseInt(a.date) || 0))
+
+export default function TrainingEditor({ certifications, onChange }: TrainingEditorProps) {
+  const keysRef = useRef<number[]>(certifications.map((_, i) => i))
+  const [collapsed, setCollapsed] = useState<Set<number>>(new Set(certifications.map((_, i) => i)))
 
   const toggle = (key: number) =>
     setCollapsed(prev => {
@@ -24,36 +27,39 @@ export default function EducationEditor({ degrees, onChange }: EducationEditorPr
       return next
     })
 
-  const commit = (updated: DegreeProps[]) => {
-    onChange(updated)
-    updateDegrees(updated)
+  const commit = (updated: CertificationProps[]) => {
+    const sorted = sortByDate(updated)
+    onChange(sorted)
+    updateCertifications(sorted)
   }
 
-  const handleField = (index: number, field: keyof DegreeProps) => ({
+  const handleField = (index: number, field: keyof CertificationProps) => ({
     onChange: (value: string) => {
-      onChange(degrees.map((d, i) => i === index ? { ...d, [field]: value } : d))
+      onChange(certifications.map((c, i) => i === index ? { ...c, [field]: value } : c))
     },
     onPersist: (value: string) => {
-      updateDegrees(degrees.map((d, i) => i === index ? { ...d, [field]: value } : d))
+      const updated = sortByDate(certifications.map((c, i) => i === index ? { ...c, [field]: value } : c))
+      onChange(updated)
+      updateCertifications(updated)
     },
   })
 
-  const addDegree = () => {
+  const addCertification = () => {
     const key = Date.now()
     keysRef.current = [...keysRef.current, key]
-    commit([...degrees, { ...EMPTY_DEGREE }])
+    commit([...certifications, { ...EMPTY }])
   }
 
-  const removeDegree = (index: number) => {
+  const removeCertification = (index: number) => {
     const key = keysRef.current[index]
     keysRef.current = keysRef.current.filter((_, i) => i !== index)
     setCollapsed(prev => { const next = new Set(prev); next.delete(key); return next })
-    commit(degrees.filter((_, i) => i !== index))
+    commit(certifications.filter((_, i) => i !== index))
   }
 
   return (
     <div className="flex flex-col gap-3">
-      {degrees.map((degree, i) => {
+      {certifications.map((cert, i) => {
         const key = keysRef.current[i]
         const isCollapsed = collapsed.has(key)
 
@@ -67,13 +73,13 @@ export default function EducationEditor({ degrees, onChange }: EducationEditorPr
               >
                 <i className={`bx bx-chevron-${isCollapsed ? 'right' : 'down'} text-gray-400 shrink-0 ${isCollapsed ? 'text-[0.7rem]' : 'text-[0.85rem]'}`} />
                 <span className={`font-medium text-gray-600 dark:text-gray-300 truncate ${isCollapsed ? 'text-[0.7rem]' : 'text-xs'}`}>
-                  {degree.title || 'Untitled'}
+                  {cert.title || 'Untitled'}
                 </span>
               </button>
               <button
                 type="button"
-                title="Remove degree"
-                onClick={() => removeDegree(i)}
+                title="Remove training"
+                onClick={() => removeCertification(i)}
                 className="text-gray-300 hover:text-red-500 dark:text-gray-600 dark:hover:text-red-400 transition-colors shrink-0"
               >
                 <i className="bx bx-trash text-[0.8rem]" />
@@ -90,11 +96,9 @@ export default function EducationEditor({ degrees, onChange }: EducationEditorPr
                   className="overflow-hidden"
                 >
                   <div className="flex flex-col gap-3 px-3 pb-3">
-                    <EditorInput id={`degree-${key}-title`}     label="Title"      defaultValue={degree.title}     {...handleField(i, 'title')} />
-                    <EditorInput id={`degree-${key}-school`}    label="School"     defaultValue={degree.school}    {...handleField(i, 'school')} />
-                    <EditorInput id={`degree-${key}-city`}      label="City"       defaultValue={degree.city}      {...handleField(i, 'city')} />
-                    <EditorInput id={`degree-${key}-startDate`} label="Start Year" defaultValue={degree.startDate} {...handleField(i, 'startDate')} />
-                    <EditorInput id={`degree-${key}-endDate`}   label="End Year"   defaultValue={degree.endDate}   {...handleField(i, 'endDate')} />
+                    <EditorInput id={`cert-${key}-title`}   label="Title"   defaultValue={cert.title}   {...handleField(i, 'title')} />
+                    <EditorInput id={`cert-${key}-company`} label="Company" defaultValue={cert.company} {...handleField(i, 'company')} />
+                    <EditorInput id={`cert-${key}-date`}    label="Year"    defaultValue={cert.date}    {...handleField(i, 'date')} />
                   </div>
                 </motion.div>
               )}
@@ -105,11 +109,11 @@ export default function EducationEditor({ degrees, onChange }: EducationEditorPr
 
       <button
         type="button"
-        onClick={addDegree}
+        onClick={addCertification}
         className="flex items-center gap-2 text-xs text-[#8ea59b] hover:text-[#7a9189] font-medium transition-colors"
       >
         <i className="bx bx-plus text-[1rem]" />
-        Add education
+        Add training
       </button>
     </div>
   )
