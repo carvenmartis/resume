@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { EditorShell } from "@/components/editor-shell";
 
 export const metadata: Metadata = {
   title: "Resume Editor",
@@ -26,8 +25,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="flex h-screen overflow-hidden bg-gray-100 dark:bg-gray-950">
-        <EditorShell>{children}</EditorShell>
+      <body className="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100">
+        {children}
       </body>
     </html>
   );

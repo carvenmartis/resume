@@ -89,3 +89,11 @@ export async function removeProfileImage() {
   data.profile = profile
   writeData(data)
 }
+
+export async function importResumeData(data: Record<string, unknown>) {
+  writeData(data)
+}
+
+export async function clearResumeData() {
+  writeData({})
+}
