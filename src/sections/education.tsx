@@ -10,7 +10,7 @@ const Education: React.FC<EducationProps> = ({ degrees }) => {
   return (
     <div>
       <h3>Education</h3>
-      <ul>
+      <ul className="space-y-10">
         {degrees.map((degree, index) => (
           <CardItem
             key={index}

@@ -2,7 +2,7 @@
 
 import fs from 'fs'
 import path from 'path'
-import type { ProfileProps } from '@/types/resume'
+import type { ProfileProps, ContactProps, DegreeProps } from '@/types/resume'
 
 const DATA_FILE = path.join(process.cwd(), 'data/resume.json')
 
@@ -16,9 +16,12 @@ function writeData(data: Record<string, unknown>) {
   fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2))
 }
 
-export async function loadProfileOverrides(): Promise<Partial<ProfileProps> | null> {
-  const data = readData()
-  return (data.profile as Partial<ProfileProps>) ?? null
+export async function loadOverrides(): Promise<{
+  profile?: Partial<ProfileProps>
+  contact?: Partial<ContactProps>
+  degrees?: DegreeProps[]
+}> {
+  return readData() as ReturnType<typeof loadOverrides> extends Promise<infer T> ? T : never
 }
 
 export async function updateProfileName(firstName: string, lastName: string) {
@@ -30,5 +33,17 @@ export async function updateProfileName(firstName: string, lastName: string) {
 export async function updateProfileSummary(summary: string) {
   const data = readData()
   data.profile = { ...(data.profile as object ?? {}), summary }
+  writeData(data)
+}
+
+export async function updateContact(contact: Partial<ContactProps>) {
+  const data = readData()
+  data.contact = { ...(data.contact as object ?? {}), ...contact }
+  writeData(data)
+}
+
+export async function updateDegrees(degrees: DegreeProps[]) {
+  const data = readData()
+  data.degrees = degrees
   writeData(data)
 }
