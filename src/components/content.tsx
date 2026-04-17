@@ -6,7 +6,7 @@ interface ContainerProps {
 
 const Container: React.FC<ContainerProps> = ({ children }) => {
   return (
-    <div className="flex w-full h-[85%] px-[11rem] gap-10">{children}</div>
+    <div className="flex w-full h-[85%] px-44 gap-10">{children}</div>
   );
 };
 
