@@ -13,6 +13,7 @@ import SkillsEditor from '@/components/skills-editor'
 import LanguageEditor from '@/components/language-editor'
 import ExperienceEditor from '@/components/experience-editor'
 import PrintButton from '@/components/print-button'
+import ExportJsonButton from '@/components/export-json-button'
 import ThemeEditor from '@/components/theme-editor'
 import { updateProfileSummary } from '@/app/actions'
 
@@ -167,7 +168,8 @@ function EditorSidebar({ previewOpen, onTogglePreview }: { previewOpen: boolean;
               <ExperienceEditor experiences={experiences} onChange={setExperiences} />
             </CollapsibleSection>
           </div>
-          <div className="p-6 border-t border-gray-200 dark:border-gray-700">
+          <div className="p-6 border-t border-gray-200 dark:border-gray-700 flex flex-col gap-2">
+            <ExportJsonButton />
             <PrintButton />
           </div>
         </>
@@ -235,7 +237,8 @@ function EditorSidebar({ previewOpen, onTogglePreview }: { previewOpen: boolean;
             </div>
           </div>
           <div className="px-8 py-5 border-t border-gray-200 dark:border-gray-700">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-5xl mx-auto flex gap-3">
+              <ExportJsonButton />
               <PrintButton />
             </div>
           </div>
