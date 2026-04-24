@@ -46,19 +46,19 @@
       "date": "2021"
     },
     {
+      "title": "Embedded Linux",
+      "company": "Vijfhart",
+      "date": "2016"
+    },
+    {
       "title": "Design Patterns",
       "company": "CompuTrain",
       "date": "2015"
     },
     {
-      "title": "Embedded Linux",
-      "company": "Vijfhart",
-      "date": "2010"
-    },
-    {
       "title": "Programmeren in C++",
       "company": "CompuTrain",
-      "date": ""
+      "date": "2015"
     }
   ],
   "skills": {
@@ -103,7 +103,11 @@
       "Functions",
       "Container Registry",
       "Container Apps",
-      "Monitor & Insights"
+      "Monitor & Insights",
+      "EFCore",
+      "Azure",
+      "PostgreSQL",
+      "Linux"
     ],
     "languages": [
       {
