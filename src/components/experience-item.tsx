@@ -3,6 +3,7 @@ import React from "react";
 interface ExperienceItemProps {
   name: string;
   company?: string;
+  location?: string;
   period?: string;
   description: string;
   technologies: string[];
@@ -11,22 +12,33 @@ interface ExperienceItemProps {
 const ExperienceItem: React.FC<ExperienceItemProps> = ({
   name,
   company,
+  location,
   period,
   description,
   technologies,
 }) => {
   return (
-    <li>
-      <div className="flex justify-between items-center">
-        <h4 className="text-[3rem] font-bold">
-          <span className="dark:text-gray-100">{name} {company && `(${company})`}</span>
-        </h4>
+    <li className="experience-item">
+      <div className="flex justify-between items-start">
+        <div>
+          <h4 className="text-[3rem] font-bold">
+            <span className="dark:text-gray-100">{name}</span>
+          </h4>
+          {company && (
+            <p className="text-gray-700 dark:text-gray-300 font-semibold text-[2.4rem] leading-snug">
+              {company}
+              {location ? `, ${location}` : ""}
+            </p>
+          )}
+        </div>
         {period && (
-          <p className="text-black dark:text-gray-100 font-bold text-[3rem] uppercase">{period}</p>
+          <p className="text-black dark:text-gray-100 font-bold text-[3rem] uppercase">
+            {period}
+          </p>
         )}
       </div>
 
-      <p className="text-gray-700 dark:text-gray-300 mb-5 text-justify text-[2.75rem] leading-snug">
+      <p className="text-gray-700 dark:text-gray-300 mt-1.5 mb-5 text-justify text-[2.75rem] leading-snug">
         {description}
       </p>
 

@@ -4,14 +4,15 @@ import React from "react";
 
 const Experience = ({ experiences }: { experiences: Experience[] }) => {
   return (
-    <div>
+    <div className="experience-section">
       <h3>Experience</h3>
-      <ul className="space-y-10">
+      <ul className="space-y-10 experience-list">
         {experiences.map((exp, index) => (
           <ExperienceItem
             key={index}
             name={exp.position}
             company={exp.company}
+            location={exp.location}
             period={exp.period}
             description={exp.description}
             technologies={exp.technologies}

@@ -12,7 +12,7 @@ interface ExperienceEditorProps {
   onChange: (experiences: Experience[]) => void
 }
 
-const EMPTY: Experience = { position: '', company: '', period: '', description: '', responsibilities: [], technologies: [] }
+const EMPTY: Experience = { position: '', company: '', location: '', period: '', description: '', responsibilities: [], technologies: [] }
 
 export default function ExperienceEditor({ experiences, onChange }: ExperienceEditorProps) {
   const keysRef = useRef<number[]>(experiences.map((_, i) => i))
@@ -76,7 +76,9 @@ export default function ExperienceEditor({ experiences, onChange }: ExperienceEd
               <button type="button" onClick={() => toggle(key)} className="flex-1 flex items-center gap-1.5 text-left min-w-0">
                 <i className={`bx bx-chevron-${isCollapsed ? 'right' : 'down'} text-gray-400 shrink-0 ${isCollapsed ? 'text-[0.7rem]' : 'text-[0.85rem]'}`} />
                 <span className={`font-medium text-gray-600 dark:text-gray-300 truncate ${isCollapsed ? 'text-[0.7rem]' : 'text-xs'}`}>
-                  {exp.position ? `${exp.position}${exp.company ? ` — ${exp.company}` : ''}` : 'Untitled'}
+                  {exp.position
+                    ? `${exp.position}${exp.company ? ` — ${exp.company}${exp.location ? `, ${exp.location}` : ''}` : ''}`
+                    : 'Untitled'}
                 </span>
               </button>
               <button type="button" title="Remove experience" onClick={() => removeExperience(i)}
@@ -97,6 +99,7 @@ export default function ExperienceEditor({ experiences, onChange }: ExperienceEd
                   <div className="flex flex-col gap-3 px-3 pb-3">
                     <EditorInput id={`exp-${key}-position`} label="Position"   defaultValue={exp.position}   {...handleField(i, 'position')} />
                     <EditorInput id={`exp-${key}-company`}  label="Company"    defaultValue={exp.company}    {...handleField(i, 'company')} />
+                    <EditorInput id={`exp-${key}-location`} label="Location"   defaultValue={exp.location ?? ''} {...handleField(i, 'location')} />
                     <EditorInput id={`exp-${key}-period`}   label="Period"     defaultValue={exp.period}     {...handleField(i, 'period')} />
                     <EditorTextarea id={`exp-${key}-desc`}  label="Description" defaultValue={exp.description} rows={3} {...handleField(i, 'description')} />
                     <EditorTextarea id={`exp-${key}-resp`}  label="Responsibilities (one per line)" defaultValue={exp.responsibilities.join('\n')} rows={4} {...handleArrayField(i, 'responsibilities')} />

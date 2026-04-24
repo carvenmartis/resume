@@ -50,6 +50,7 @@ export interface HobbyProps {
 export interface Experience {
   position: string;
   company: string;
+  location?: string;
   period: string;
   description: string;
   responsibilities: string[];
@@ -57,22 +58,22 @@ export interface Experience {
 }
 
 export interface ThemeProps {
-  accentColor: string
-  fontFamily: string
+  accentColor: string;
+  fontFamily: string;
 }
 
 export const DEFAULT_THEME: ThemeProps = {
-  accentColor: '#8ea59b',
-  fontFamily: 'Lato',
-}
+  accentColor: "#8ea59b",
+  fontFamily: "Lato",
+};
 
 export const FONT_OPTIONS = [
-  { label: 'Lato', value: 'Lato' },
-  { label: 'Playfair Display', value: 'Playfair Display' },
-  { label: 'Montserrat', value: 'Montserrat' },
-  { label: 'Raleway', value: 'Raleway' },
-  { label: 'Cormorant Garamond', value: 'Cormorant Garamond' },
-]
+  { label: "Lato", value: "Lato" },
+  { label: "Playfair Display", value: "Playfair Display" },
+  { label: "Montserrat", value: "Montserrat" },
+  { label: "Raleway", value: "Raleway" },
+  { label: "Cormorant Garamond", value: "Cormorant Garamond" },
+];
 
 export interface ResumeProps {
   profile: ProfileProps;
@@ -94,7 +95,8 @@ export const ResumeData: ResumeProps = {
     image: "/bg-img.jpg",
     // summary:
     //   "Ik ben een gedreven fullstack developer met ruim 10 jaar ervaring in het ontwikkelen van software. Mijn expertise ligt in het ontwerpen, implementeren en optimaliseren van zowel front-end als back-end softwareoplossingen, met een sterke focus op C#, TypeScript en frameworks zoals Angular, React en Blazor. Ik ben een proactieve teamspeler met sterke communicatieve vaardigheden en een probleemoplossend vermogen. Mijn doel is om mijn expertise en vaardigheden in te zetten om bij te dragen aan de groei en het succes van projecten.",
-    summary: "sIk ben een gedreven fullstack developer met ruim 10 jaar ervaring in softwareontwikkeling. Ik heb uitgebreide ervaring in het ontwikkelen van zowel backend als frontend oplossingen. Graag zet ik mijn expertise in om een bijdrage te leveren aan het doorontwikkelen van innovatieve en efficiente softwareoplossingen. Naast mijn werk blijf ik graag op de hoogte van de nieuwste technieken door deel te nemen aan IT evenementen en persoonlijke projecten waarin ik nieuwe concepten en innovaties kan verkennen. Mijn drijfveer? Samenwerken aan oplossingen die impact maken.sssssssssssssss",
+    summary:
+      "sIk ben een gedreven fullstack developer met ruim 10 jaar ervaring in softwareontwikkeling. Ik heb uitgebreide ervaring in het ontwikkelen van zowel backend als frontend oplossingen. Graag zet ik mijn expertise in om een bijdrage te leveren aan het doorontwikkelen van innovatieve en efficiente softwareoplossingen. Naast mijn werk blijf ik graag op de hoogte van de nieuwste technieken door deel te nemen aan IT evenementen en persoonlijke projecten waarin ik nieuwe concepten en innovaties kan verkennen. Mijn drijfveer? Samenwerken aan oplossingen die impact maken.sssssssssssssss",
   },
   contact: {
     location: "Zoetermeer, Netherlands",
@@ -229,6 +231,34 @@ export const ResumeData: ResumeProps = {
     },
   ],
   experiences: [
+    {
+      position: "DevOps Engineer",
+      company: "Vattenfall",
+      location: "Amsterdam",
+      period: "November 2025 - Present",
+      description:
+        "Bij Vattenfall in Amsterdam werk ik als DevOps Engineer aan het verbeteren van ontwikkelprocessen, deploymentflows en platformstabiliteit.",
+      responsibilities: [
+        "Onderhouden en verbeteren van CI/CD-processen",
+        "Ondersteunen van teams bij deployment en operationele vraagstukken",
+        "Bijdragen aan de betrouwbaarheid en beveiliging van het platform",
+      ],
+      technologies: ["Azure DevOps", "CI/CD", "Docker", "Kubernetes", "Bicep"],
+    },
+    {
+      position: "DevOps Engineer",
+      company: "Damen Naval",
+      location: "Vlissingen",
+      period: "April 2025 - November 2025",
+      description:
+        "Bij Damen Naval in Vlissingen was ik verantwoordelijk voor DevOps-werkzaamheden gericht op automatisering, deployment en operationele ondersteuning.",
+      responsibilities: [
+        "Automatiseren van build- en releaseprocessen",
+        "Verbeteren van deployment workflows",
+        "Ondersteunen van ontwikkelteams bij operationele processen",
+      ],
+      technologies: ["Azure DevOps", "YAML", "Docker", "Kubernetes", "Git"],
+    },
     {
       position: "Fullstack Developer",
       company: "Rabobank",
