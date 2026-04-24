@@ -562,23 +562,50 @@
       "location": "Amsterdam"
     },
     {
-      "position": "Senior .NET Developer",
+      "position": "Senior Fullstack Developer & DevOps Engineer",
       "company": "Damen Naval",
       "period": "2024 - 2025",
-      "description": "Bij Damen Naval in Vlissingen was ik verantwoordelijk voor DevOps-werkzaamheden gericht op automatisering, deployment en operationele ondersteuning.",
+      "description": "Bij Damen Naval in Vlissingen werkte ik aan de digitale transformatie van kritische bedrijfsprocessen binnen een hoogbeveiligde defense-omgeving. Ik was verantwoordelijk voor het ontwerpen en implementeren van fullstack applicaties en het moderniseren van de DevOps-infrastructuur. Mijn werk droeg direct bij aan de efficiëntie van scheepsbouwprocessen en het verbeteren van de interne samenwerking tussen engineering- en softwareteams. Binnen deze omgeving, waarbij naleving van compliance-richtlijnen en veilige softwareontwikkeling centraal stonden.",
       "responsibilities": [
-        "Automatiseren van build- en releaseprocessen",
-        "Verbeteren van deployment workflows",
-        "Ondersteunen van ontwikkelteams bij operationele processen"
+        "Ontwerpen en ontwikkelen van fullstack webapplicaties met C# (.NET Core) en Angular voor interne bedrijfsprocessen",
+        "Opzetten en optimaliseren van CI/CD-pipelines in Azure DevOps voor meerdere development teams",
+        "Implementeren van Infrastructure as Code met Bicep en Terraform voor Azure-omgevingen",
+        "Containeriseren van applicaties met Docker en beheren van workloads via Kubernetes",
+        "Borgen van code- en beveiligingskwaliteit via SonarQube, Checkmarx en OWASP-richtlijnen",
+        "Uitvoeren van code reviews en kennisdeling binnen en tussen teams",
+        "Moderniseren van legacy systemen naar cloud-native architecturen",
+        "Samenwerken met architecten, engineers en stakeholders in een agile/scrum omgeving",
+        "Bewaken van monitoring en observability via dashboards en alerting"
       ],
       "technologies": [
+        "C#",
+        ".NET Core 8",
+        "Angular",
+        "TypeScript",
+        "RxJS",
+        "NgRx",
         "Azure DevOps",
-        "YAML",
+        "YAML Pipelines",
         "Docker",
         "Kubernetes",
-        "Git"
+        "Helm",
+        "Bicep",
+        "Terraform",
+        "Azure Container Apps",
+        "Azure Key Vault",
+        "Application Insights",
+        "SonarQube",
+        "Checkmarx",
+        "OAuth2/JWT",
+        "xUnit",
+        "NSubstitute",
+        "FluentAssertions",
+        "SOLID",
+        "TDD",
+        "Git",
+        "Scrum"
       ],
-      "location": "Vissingen"
+      "location": "Vlissingen"
     },
     {
       "position": "Fullstack Developer",
