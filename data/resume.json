@@ -43,7 +43,12 @@
     {
       "title": "Scrum Master ",
       "company": "",
-      "date": ""
+      "date": "2021"
+    },
+    {
+      "title": "Embedded Linux",
+      "company": "Vijfhart",
+      "date": "2010"
     }
   ],
   "skills": {
@@ -998,6 +1003,22 @@
         "XML"
       ],
       "location": "Breda"
+    }
+  ],
+  "degrees": [
+    {
+      "title": "HBO Technische Informatica",
+      "school": "Avans Hogeschool",
+      "city": "Breda",
+      "startDate": "2010",
+      "endDate": "2015"
+    },
+    {
+      "title": "Telematica",
+      "school": "M.T.S",
+      "city": "Curacao",
+      "startDate": "2006",
+      "endDate": "2010"
     }
   ]
 }
